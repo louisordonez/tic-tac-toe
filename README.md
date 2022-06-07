@@ -1,6 +1,6 @@
 # tic-tac-toe
 
-This project is a Tic Tac Toe game web application.
+This project is a Tic-Tac-Toe game web application.
 
 ## Tech Stack
 
