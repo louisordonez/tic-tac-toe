@@ -1,0 +1,12 @@
+.board-container {
+  display: grid;
+  grid-template-columns: 20vmin 20vmin 20vmin;
+  border: 1px solid black;
+}
+
+.box {
+  padding: 5vmin;
+  font-size: 7vmin;
+  text-align: center;
+  border: 1px solid black;
+}

@@ -9,4 +9,24 @@
 
 body {
   font-family: "Nunito", sans-serif;
+}
+
+.board-container {
+  display: grid;
+  grid-template-columns: 20vmin 20vmin 20vmin;
+  border: 1px solid black;
+}
+
+.box {
+  padding: 5vmin;
+  font-size: 7vmin;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=main.css.map */
