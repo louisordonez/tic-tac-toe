@@ -1,23 +1,24 @@
 @use './variables' as *;
 
 .board-container {
-  display: grid;
-  grid-template-columns: 20vmin 20vmin 20vmin;
-  border: 1px solid var(--black);
-  border-radius: 25px;
+  display: flex;
+  border-radius: 1vmin;
+  margin: 2vmin;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .box {
-  padding: 5vmin;
-  font-size: 7vmin;
+  border: 0.2vmin solid var(--black);
+  border-radius: 2.4vmin;
+  margin-left: 2vmin;
+  width: 20vmin;
+  height: 20vmin;
+  padding: 1vmin;
   text-align: center;
-}
+  cursor: pointer;
 
-.border-top-bottom {
-  border-top: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
-}
-
-.border-left {
-  border-left: 1px solid var(--black);
+  span {
+    font-size: 13vmin;
+  }
 }

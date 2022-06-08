@@ -9,22 +9,43 @@
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
-    <section class="top">Title</section>
+    <section class="top">
+      <div>
+        <h1>Tic-Tac-Toe</h1>
+      </div>
+      <div>
+        <p data-player>Player</p>
+      </div>
+    </section>
     <section class="board">
       <div class="center">
-        <div class="board-container">
-          <div class="box" data-upper-left>1</div>
-          <div class="box border-left" data-upper-middle>2</div>
-          <div class="box border-left" data-upper-right>3</div>
-          <div class="box border-top-bottom" data-middle-left>4</div>
-          <div class="box border-top-bottom border-left" data-middle-middle>5</div>
-          <div class="box border-top-bottom border-left" data-middle-right>6</div>
-          <div class="box" data-lower-left>7</div>
-          <div class="box border-left" data-lower-middle>8</div>
-          <div class="box border-left" data-lower-right>9</div>
+        <div class="upper board-container">
+          <div class="box"><span data-upper-left>X</span></div>
+          <div class="box border-left"><span data-upper-middle>O</span></div>
+          <div class="box border-left"><span data-upper-right>X</span></div>
+        </div>
+        <div class="middle board-container">
+          <div class="box border-top-bottom" data-middle-left></div>
+          <div class="box border-top-bottom border-left" data-middle-middle></div>
+          <div class="box border-top-bottom border-left" data-middle-right></div>
+        </div>
+        <div class="lower board-container border-bottom">
+          <div class="box" data-lower-left></div>
+          <div class="box border-left" data-lower-middle></div>
+          <div class="box border-left" data-lower-right></div>
         </div>
       </div>
     </section>
-    <section class="bottom">Buttons</section>
+    <section class="bottom">
+      <div>
+        <button data-undo>Undo</button>
+      </div>
+      <div>
+        <button data-reset>Reset</button>
+      </div>
+      <div>
+        <button data-redo>Redo</button>
+      </div>
+    </section>
   </body>
 </html>

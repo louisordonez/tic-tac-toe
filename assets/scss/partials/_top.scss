@@ -3,5 +3,13 @@
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid var(--black);
+  text-align: center;
+
+  h1 {
+    font-size: 6vmin;
+  }
+
+  p {
+    font-size: 3vmin;
+  }
 }
