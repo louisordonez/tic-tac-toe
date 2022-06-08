@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .board-container {
   display: grid;
   grid-template-columns: 20vmin 20vmin 20vmin;
