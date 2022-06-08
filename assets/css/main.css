@@ -43,6 +43,14 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+.title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--black);
+}
+
 .board-container {
   display: grid;
   grid-template-columns: 20vmin 20vmin 20vmin;
@@ -63,6 +71,14 @@ body {
 
 .border-left {
   border-left: 1px solid var(--black);
+}
+
+.bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--black);
 }
 
 .center {
