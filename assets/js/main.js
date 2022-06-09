@@ -30,4 +30,12 @@ window.addEventListener('click', (event) => {
   }
 })
 
-upperLeftBox.addEventListener('click', () => (upperLeftBox.textContent = 'O'))
+upperLeftBox.addEventListener('click', () => (upperLeftBox.textContent = 'X'))
+upperMiddleBox.addEventListener('click', () => (upperMiddleBox.textContent = 'O'))
+upperRightBox.addEventListener('click', () => (upperRightBox.textContent = 'X'))
+middleLeftBox.addEventListener('click', () => (middleLeftBox.textContent = 'O'))
+middleMiddleBox.addEventListener('click', () => (middleMiddleBox.textContent = 'X'))
+middleRightBox.addEventListener('click', () => (middleRightBox.textContent = 'O'))
+lowerLeftBox.addEventListener('click', () => (lowerLeftBox.textContent = 'X'))
+lowerMiddleBox.addEventListener('click', () => (lowerMiddleBox.textContent = 'O'))
+lowerRightBox.addEventListener('click', () => (lowerRightBox.textContent = 'X'))

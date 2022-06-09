@@ -17,13 +17,10 @@
   width: 20vmin;
   height: 20vmin;
   padding: 1vmin;
+  font-size: 13vmin;
   text-align: center;
   cursor: pointer;
 
   @extend %box-shadow;
   @extend %hover-move;
-
-  span {
-    font-size: 13vmin;
-  }
 }
