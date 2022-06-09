@@ -30,12 +30,24 @@ window.addEventListener('click', (event) => {
   }
 })
 
-upperLeftBox.addEventListener('click', () => (upperLeftBox.textContent = 'X'))
-upperMiddleBox.addEventListener('click', () => (upperMiddleBox.textContent = 'O'))
-upperRightBox.addEventListener('click', () => (upperRightBox.textContent = 'X'))
-middleLeftBox.addEventListener('click', () => (middleLeftBox.textContent = 'O'))
-middleMiddleBox.addEventListener('click', () => (middleMiddleBox.textContent = 'X'))
-middleRightBox.addEventListener('click', () => (middleRightBox.textContent = 'O'))
-lowerLeftBox.addEventListener('click', () => (lowerLeftBox.textContent = 'X'))
-lowerMiddleBox.addEventListener('click', () => (lowerMiddleBox.textContent = 'O'))
-lowerRightBox.addEventListener('click', () => (lowerRightBox.textContent = 'X'))
+// Turn
+let playerTurn = 'X'
+
+const changeTurn = () => {
+  if (playerTurn == 'X') {
+    playerTurn = 'O'
+  } else {
+    playerTurn = 'X'
+  }
+  return playerTurn
+}
+
+upperLeftBox.addEventListener('click', () => (upperLeftBox.textContent = changeTurn()))
+upperMiddleBox.addEventListener('click', () => (upperMiddleBox.textContent = changeTurn()))
+upperRightBox.addEventListener('click', () => (upperRightBox.textContent = changeTurn()))
+middleLeftBox.addEventListener('click', () => (middleLeftBox.textContent = changeTurn()))
+middleMiddleBox.addEventListener('click', () => (middleMiddleBox.textContent = changeTurn()))
+middleRightBox.addEventListener('click', () => (middleRightBox.textContent = changeTurn()))
+lowerLeftBox.addEventListener('click', () => (lowerLeftBox.textContent = changeTurn()))
+lowerMiddleBox.addEventListener('click', () => (lowerMiddleBox.textContent = changeTurn()))
+lowerRightBox.addEventListener('click', () => (lowerRightBox.textContent = changeTurn()))
