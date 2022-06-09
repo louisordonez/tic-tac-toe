@@ -34,7 +34,7 @@ window.addEventListener('click', (event) => {
 let playerTurn = 'X'
 playerText.textContent = playerTurn
 
-const changeTurn = () => {
+const setPlayerTurn = () => {
   if (playerTurn == 'X') {
     playerTurn = 'O'
   } else {
@@ -44,12 +44,12 @@ const changeTurn = () => {
   return playerTurn
 }
 
-upperLeftBox.addEventListener('click', () => (upperLeftBox.textContent = changeTurn()))
-upperMiddleBox.addEventListener('click', () => (upperMiddleBox.textContent = changeTurn()))
-upperRightBox.addEventListener('click', () => (upperRightBox.textContent = changeTurn()))
-middleLeftBox.addEventListener('click', () => (middleLeftBox.textContent = changeTurn()))
-middleMiddleBox.addEventListener('click', () => (middleMiddleBox.textContent = changeTurn()))
-middleRightBox.addEventListener('click', () => (middleRightBox.textContent = changeTurn()))
-lowerLeftBox.addEventListener('click', () => (lowerLeftBox.textContent = changeTurn()))
-lowerMiddleBox.addEventListener('click', () => (lowerMiddleBox.textContent = changeTurn()))
-lowerRightBox.addEventListener('click', () => (lowerRightBox.textContent = changeTurn()))
+upperLeftBox.addEventListener('click', () => (upperLeftBox.textContent = setPlayerTurn()))
+upperMiddleBox.addEventListener('click', () => (upperMiddleBox.textContent = setPlayerTurn()))
+upperRightBox.addEventListener('click', () => (upperRightBox.textContent = setPlayerTurn()))
+middleLeftBox.addEventListener('click', () => (middleLeftBox.textContent = setPlayerTurn()))
+middleMiddleBox.addEventListener('click', () => (middleMiddleBox.textContent = setPlayerTurn()))
+middleRightBox.addEventListener('click', () => (middleRightBox.textContent = setPlayerTurn()))
+lowerLeftBox.addEventListener('click', () => (lowerLeftBox.textContent = setPlayerTurn()))
+lowerMiddleBox.addEventListener('click', () => (lowerMiddleBox.textContent = setPlayerTurn()))
+lowerRightBox.addEventListener('click', () => (lowerRightBox.textContent = setPlayerTurn()))
