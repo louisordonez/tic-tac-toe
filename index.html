@@ -9,45 +9,47 @@
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
-    <section class="top">
-      <div>
-        <h1>Tic-Tac-Toe</h1>
-      </div>
-      <div>
-        <p data-player>Player</p>
-      </div>
-    </section>
-    <section class="board">
-      <div class="center">
-        <div class="upper board-container">
-          <div class="box"><span data-upper-left>X</span></div>
-          <div class="box border-left"><span data-upper-middle>O</span></div>
-          <div class="box border-left"><span data-upper-right>X</span></div>
-        </div>
-        <div class="middle board-container">
-          <div class="box border-top-bottom" data-middle-left></div>
-          <div class="box border-top-bottom border-left" data-middle-middle></div>
-          <div class="box border-top-bottom border-left" data-middle-right></div>
-        </div>
-        <div class="lower board-container border-bottom">
-          <div class="box" data-lower-left></div>
-          <div class="box border-left" data-lower-middle></div>
-          <div class="box border-left" data-lower-right></div>
-        </div>
-      </div>
-    </section>
-    <section class="bottom">
-      <div class="bottom-container">
+    <main>
+      <section class="top">
         <div>
-          <button data-undo>Undo</button>
+          <h1>Tic-Tac-Toe</h1>
         </div>
         <div>
-          <button data-reset>Reset</button>
+          <p data-player>Player</p>
         </div>
-        <div>
-          <button data-redo>Redo</button>
+      </section>
+      <section class="board">
+        <div class="center">
+          <div class="upper board-container">
+            <div class="box"><span data-upper-left>X</span></div>
+            <div class="box border-left"><span data-upper-middle>O</span></div>
+            <div class="box border-left"><span data-upper-right>X</span></div>
+          </div>
+          <div class="middle board-container">
+            <div class="box border-top-bottom" data-middle-left></div>
+            <div class="box border-top-bottom border-left" data-middle-middle></div>
+            <div class="box border-top-bottom border-left" data-middle-right></div>
+          </div>
+          <div class="lower board-container border-bottom">
+            <div class="box" data-lower-left></div>
+            <div class="box border-left" data-lower-middle></div>
+            <div class="box border-left" data-lower-right></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="bottom">
+        <div class="bottom-container">
+          <div>
+            <button data-undo>Undo</button>
+          </div>
+          <div>
+            <button data-reset>Reset</button>
+          </div>
+          <div>
+            <button data-redo>Redo</button>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
