@@ -1,7 +1,9 @@
+@use './variables' as *;
+
 .bottom {
   position: absolute;
   left: 50%;
-  bottom: 2%;
+  bottom: 0;
   transform: translate(-50%, -50%);
 }
 
@@ -17,6 +19,12 @@
     margin-right: 8vmin;
     border-radius: 1vmin;
     border: none;
-    background-color: var(--light);
+    background-color: var(--gray-400);
+    @extend %box-shadow;
+    @extend %hover-move;
+
+    &:hover {
+      background-color: var(--white);
+    }
   }
 }

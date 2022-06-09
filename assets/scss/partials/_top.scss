@@ -1,9 +1,12 @@
+@use './variables' as *;
+
 .top {
   position: absolute;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  @extend %text-shadow;
 
   h1 {
     font-size: 6vmin;

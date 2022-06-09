@@ -10,23 +10,11 @@
           animation: fadeAnimation 0.3s forwards;
 }
 
-@-webkit-keyframes fadeAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+body {
+  background-color: var(--blue);
+  color: var(--white);
 }
 
-@keyframes fadeAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 button {
   cursor: pointer;
 }
@@ -63,6 +51,19 @@ button {
   --dark: var(--gray-900);
 }
 
+.bottom-container button, .box {
+  box-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
+}
+
+.top {
+  text-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
+}
+
+.bottom-container button:hover, .box:hover {
+  position: relative;
+  top: 0.5vmin;
+}
+
 .top {
   position: absolute;
   top: 10%;
@@ -86,7 +87,8 @@ button {
 }
 
 .box {
-  border: 0.2vmin solid var(--black);
+  border: 0.5vmin solid var(--white);
+  background-color: var(--dark);
   border-radius: 2.4vmin;
   margin-left: 1vmin;
   margin-right: 1vmin;
@@ -96,10 +98,6 @@ button {
   text-align: center;
   cursor: pointer;
 }
-.box:hover {
-  position: relative;
-  top: 0.5vmin;
-}
 .box span {
   font-size: 13vmin;
 }
@@ -107,7 +105,7 @@ button {
 .bottom {
   position: absolute;
   left: 50%;
-  bottom: 2%;
+  bottom: 0;
   transform: translate(-50%, -50%);
 }
 
@@ -123,7 +121,10 @@ button {
   margin-right: 8vmin;
   border-radius: 1vmin;
   border: none;
-  background-color: var(--light);
+  background-color: var(--gray-400);
+}
+.bottom-container button:hover {
+  background-color: var(--white);
 }
 
 .center {
@@ -131,4 +132,22 @@ button {
   left: 50%;
   top: 51%;
   transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */
