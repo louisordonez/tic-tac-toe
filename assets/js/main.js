@@ -32,6 +32,7 @@ window.addEventListener('click', (event) => {
 
 // Turn
 let playerTurn = 'X'
+playerText.textContent = playerTurn
 
 const changeTurn = () => {
   if (playerTurn == 'X') {
@@ -39,6 +40,7 @@ const changeTurn = () => {
   } else {
     playerTurn = 'X'
   }
+  playerText.textContent = playerTurn
   return playerTurn
 }
 
