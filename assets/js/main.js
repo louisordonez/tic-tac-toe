@@ -18,6 +18,16 @@ const resetButton = document.querySelector('[data-reset]')
 const undoButton = document.querySelector('[data-undo]')
 const movesButton = document.querySelector('[data-moves]')
 
-let xPlayerTurn = true
+// Modal
+const movesModal = document.querySelector('[data-moves-modal]')
+const movesModalClose = document.querySelector('[data-moves-modal-close]')
+
+movesButton.addEventListener('click', () => (movesModal.style.display = 'block'))
+movesModalClose.addEventListener('click', () => (movesModal.style.display = 'none'))
+window.addEventListener('click', (event) => {
+  if (event.target == movesModal) {
+    movesModal.style.display = 'none'
+  }
+})
 
 upperLeftBox.addEventListener('click', () => (upperLeftBox.textContent = 'O'))

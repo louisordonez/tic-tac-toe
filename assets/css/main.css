@@ -51,7 +51,7 @@ button {
   --dark: var(--gray-900);
 }
 
-.bottom-container button, .box {
+.moves-modal-content, .bottom-container button, .box {
   box-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
@@ -129,6 +129,47 @@ button {
 
 .moves-button {
   margin-left: 10vmin;
+}
+
+.moves-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 15vmin;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.moves-modal-content {
+  background-color: var(--white);
+  margin: auto;
+  padding: 2vmin;
+  width: 80%;
+  height: 80%;
+  border-radius: 1vmin;
+}
+.moves-modal-content h1 {
+  color: var(--black);
+  margin-left: 2vmin;
+  font-size: 4vmin;
+  text-align: center;
+}
+
+.moves-modal-close {
+  text-align: right;
+  margin-right: 2vmin;
+}
+.moves-modal-close span {
+  font-size: 5vmin;
+  font-weight: bold;
+  color: var(--black);
+}
+.moves-modal-close span:hover, .moves-modal-close span:focus {
+  color: var(--gray-400);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .center {
