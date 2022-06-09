@@ -3,7 +3,7 @@
 .bottom {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 2%;
   transform: translate(-50%, -50%);
 }
 
@@ -13,10 +13,10 @@
   justify-items: center;
 
   button {
-    font-size: 3vmin;
-    padding: 2vmin;
-    margin-left: 8vmin;
-    margin-right: 8vmin;
+    font-size: 5vmin;
+    padding: 0 4.7vmin;
+    margin-left: 1vmin;
+    margin-right: 1vmin;
     border-radius: 1vmin;
     border: none;
     background-color: var(--gray-400);
@@ -27,4 +27,8 @@
       background-color: var(--white);
     }
   }
+}
+
+.moves-button {
+  margin-left: 10vmin;
 }

@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="assets/js/main.js" defer></script>
     <title>Tic-Tac-Toe</title>
   </head>
@@ -40,13 +47,16 @@
       <section class="bottom">
         <div class="bottom-container">
           <div>
-            <button data-undo>Undo</button>
+            <button data-undo><i class="fa-solid fa-caret-left"></i></i></button>
           </div>
           <div>
-            <button data-reset>Reset</button>
+            <button data-reset><i class="fa-solid fa-rotate-left"></i></button>
           </div>
           <div>
-            <button data-redo>Redo</button>
+            <button data-redo><i class="fa-solid fa-caret-right"></i></i></button>
+          </div>
+          <div class="moves-button">
+            <button data-moves><i class="fa-solid fa-clock-rotate-left"></i></button>
           </div>
         </div>
       </section>

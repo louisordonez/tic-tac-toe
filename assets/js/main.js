@@ -16,6 +16,7 @@ const lowerRightBox = document.querySelector('[data-lower-right]')
 const redoButton = document.querySelector('[data-redo]')
 const resetButton = document.querySelector('[data-reset]')
 const undoButton = document.querySelector('[data-undo]')
+const movesButton = document.querySelector('[data-moves]')
 
 let xPlayerTurn = true
 
