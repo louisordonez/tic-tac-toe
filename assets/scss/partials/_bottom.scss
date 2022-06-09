@@ -1,7 +1,22 @@
 .bottom {
   position: absolute;
   left: 50%;
-  bottom: 5%;
+  bottom: 2%;
   transform: translate(-50%, -50%);
-  border: 1px solid var(--black);
+}
+
+.bottom-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  button {
+    font-size: 3vmin;
+    padding: 2vmin;
+    margin-left: 8vmin;
+    margin-right: 8vmin;
+    border-radius: 1vmin;
+    border: none;
+    background-color: var(--light);
+  }
 }

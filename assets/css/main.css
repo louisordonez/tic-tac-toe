@@ -11,6 +11,10 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 :root {
   --blue: #0d6efd;
   --indigo: #6610f2;
@@ -68,7 +72,8 @@ body {
 .box {
   border: 0.2vmin solid var(--black);
   border-radius: 2.4vmin;
-  margin-left: 2vmin;
+  margin-left: 1vmin;
+  margin-right: 1vmin;
   width: 20vmin;
   height: 20vmin;
   padding: 1vmin;
@@ -82,14 +87,28 @@ body {
 .bottom {
   position: absolute;
   left: 50%;
-  bottom: 5%;
+  bottom: 2%;
   transform: translate(-50%, -50%);
-  border: 1px solid var(--black);
+}
+
+.bottom-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.bottom-container button {
+  font-size: 3vmin;
+  padding: 2vmin;
+  margin-left: 8vmin;
+  margin-right: 8vmin;
+  border-radius: 1vmin;
+  border: none;
+  background-color: var(--light);
 }
 
 .center {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 51%;
   transform: translate(-50%, -50%);
 }/*# sourceMappingURL=main.css.map */
