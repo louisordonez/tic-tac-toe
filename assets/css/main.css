@@ -157,6 +157,12 @@ button {
   font-size: 4vmin;
   text-align: center;
 }
+.moves-modal-content p {
+  color: var(--black);
+  margin-left: 2vmin;
+  font-size: 3vmin;
+  text-align: left;
+}
 
 .moves-modal-close {
   text-align: right;
