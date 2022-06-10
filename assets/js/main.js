@@ -39,18 +39,23 @@ let state = [
     ['', '', ''],
   ],
 ]
-
 let moves = []
+let playerTurn = 'O'
 
-// let playerTurn = 'X'
+const setPlayerTurn = () => {
+  if (playerTurn === 'X') {
+    playerTurn = 'O'
+  } else if (playerTurn === 'O') {
+    playerTurn = 'X'
+  }
+}
 
-// const setPlayerTurn = () => {
-//   if (playerTurn === 'X') {
-//     playerTurn = 'O'
-//   } else if (playerTurn === 'O') {
-//     playerTurn = 'X'
-//   }
-// }
+const setPlayerTurnText = () => {
+  playerTurnText.textContent = playerTurn
+}
+
+setPlayerTurn()
+playerTurnText.textContent = 'X'
 
 const addMove = (text) => {
   const newP = document.createElement('p')
@@ -62,22 +67,37 @@ const addMove = (text) => {
 
 upperLeftBox.addEventListener('click', () => {
   if (upperLeftBox.textContent === '') {
-    state[0][0][0] = 'X'
-    upperLeftBox.textContent = 'X'
+    state[0][0][0] = playerTurn
+    upperLeftBox.textContent = playerTurn
+    addMove(`Player ${playerTurn}: Upper Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
+    setPlayerTurn()
+    setPlayerTurnText()
   }
 })
-
 upperMiddleBox.addEventListener('click', () => {
   if (upperMiddleBox.textContent === '') {
-    state[0][0][1] = 'O'
-    upperMiddleBox.textContent = 'O'
+    state[0][0][1] = playerTurn
+    upperMiddleBox.textContent = playerTurn
+    addMove(`Player ${playerTurn}: Upper Middle Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
+    setPlayerTurn()
+    setPlayerTurnText()
   }
 })
-// upperRightBox.addEventListener('click', () => (upperRightBox.textContent = setPlayerTurn()))
+upperRightBox.addEventListener('click', () => {
+  if (upperRightBox.textContent === '') {
+    state[0][0][2] = playerTurn
+    upperRightBox.textContent = playerTurn
+    addMove(`Player ${playerTurn}: Upper Right Box`)
+    moves.push(JSON.parse(JSON.stringify(state)))
+    console.log(moves)
+    setPlayerTurn()
+    setPlayerTurnText()
+  }
+})
 // middleLeftBox.addEventListener('click', () => (middleLeftBox.textContent = setPlayerTurn()))
 // middleMiddleBox.addEventListener('click', () => (middleMiddleBox.textContent = setPlayerTurn()))
 // middleRightBox.addEventListener('click', () => (middleRightBox.textContent = setPlayerTurn()))

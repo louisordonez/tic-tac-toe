@@ -34,6 +34,12 @@
     margin-left: 2vmin;
     font-size: 3vmin;
     text-align: left;
+    &:nth-child(even) {
+      background: var(--white);
+    }
+    &:nth-child(odd) {
+      background: var(--gray-400);
+    }
   }
 }
 
