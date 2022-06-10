@@ -98,9 +98,69 @@ upperRightBox.addEventListener('click', () => {
     setPlayerTurnText()
   }
 })
-// middleLeftBox.addEventListener('click', () => (middleLeftBox.textContent = setPlayerTurn()))
-// middleMiddleBox.addEventListener('click', () => (middleMiddleBox.textContent = setPlayerTurn()))
-// middleRightBox.addEventListener('click', () => (middleRightBox.textContent = setPlayerTurn()))
-// lowerLeftBox.addEventListener('click', () => (lowerLeftBox.textContent = setPlayerTurn()))
-// lowerMiddleBox.addEventListener('click', () => (lowerMiddleBox.textContent = setPlayerTurn()))
-// lowerRightBox.addEventListener('click', () => (lowerRightBox.textContent = setPlayerTurn()))
+middleLeftBox.addEventListener('click', () => {
+  if (middleLeftBox.textContent === '') {
+    state[0][1][0] = playerTurn
+    middleLeftBox.textContent = playerTurn
+    addMove(`Player ${playerTurn}: Middle Left Box`)
+    moves.push(JSON.parse(JSON.stringify(state)))
+    console.log(moves)
+    setPlayerTurn()
+    setPlayerTurnText()
+  }
+})
+middleMiddleBox.addEventListener('click', () => {
+  if (middleMiddleBox.textContent === '') {
+    state[0][1][1] = playerTurn
+    middleMiddleBox.textContent = playerTurn
+    addMove(`Player ${playerTurn}: Middle Middle Box`)
+    moves.push(JSON.parse(JSON.stringify(state)))
+    console.log(moves)
+    setPlayerTurn()
+    setPlayerTurnText()
+  }
+})
+middleRightBox.addEventListener('click', () => {
+  if (middleRightBox.textContent === '') {
+    state[0][1][2] = playerTurn
+    middleRightBox.textContent = playerTurn
+    addMove(`Player ${playerTurn}: Middle Right Box`)
+    moves.push(JSON.parse(JSON.stringify(state)))
+    console.log(moves)
+    setPlayerTurn()
+    setPlayerTurnText()
+  }
+})
+lowerLeftBox.addEventListener('click', () => {
+  if (lowerLeftBox.textContent === '') {
+    state[0][2][0] = playerTurn
+    lowerLeftBox.textContent = playerTurn
+    addMove(`Player ${playerTurn}: Lower Left Box`)
+    moves.push(JSON.parse(JSON.stringify(state)))
+    console.log(moves)
+    setPlayerTurn()
+    setPlayerTurnText()
+  }
+})
+lowerMiddleBox.addEventListener('click', () => {
+  if (lowerMiddleBox.textContent === '') {
+    state[0][2][1] = playerTurn
+    lowerMiddleBox.textContent = playerTurn
+    addMove(`Player ${playerTurn}: Lower Middle Box`)
+    moves.push(JSON.parse(JSON.stringify(state)))
+    console.log(moves)
+    setPlayerTurn()
+    setPlayerTurnText()
+  }
+})
+lowerRightBox.addEventListener('click', () => {
+  if (lowerRightBox.textContent === '') {
+    state[0][2][2] = playerTurn
+    lowerRightBox.textContent = playerTurn
+    addMove(`Player ${playerTurn}: Lower Right Box`)
+    moves.push(JSON.parse(JSON.stringify(state)))
+    console.log(moves)
+    setPlayerTurn()
+    setPlayerTurnText()
+  }
+})
