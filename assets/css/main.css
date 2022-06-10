@@ -154,12 +154,14 @@ button {
 .moves-modal-content h1 {
   color: var(--black);
   margin-left: 2vmin;
+  margin-right: 2vmin;
   font-size: 4vmin;
   text-align: center;
 }
 .moves-modal-content p {
   color: var(--black);
   margin-left: 2vmin;
+  margin-right: 2vmin;
   font-size: 3vmin;
   text-align: left;
 }
