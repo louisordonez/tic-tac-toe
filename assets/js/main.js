@@ -31,7 +31,7 @@ window.addEventListener('click', (event) => {
   }
 })
 
-// Turn
+// Game Logic
 let state = [
   [
     ['', '', ''],
@@ -57,7 +57,7 @@ const setPlayerTurnText = () => {
 setPlayerTurn()
 playerTurnText.textContent = 'X'
 
-const addMove = (text) => {
+const addMoveToList = (text) => {
   const newP = document.createElement('p')
   const newContent = document.createTextNode(text)
   newP.style.fontWeight = '600'
@@ -65,11 +65,12 @@ const addMove = (text) => {
   movesModalList.appendChild(newP)
 }
 
+// Events
 upperLeftBox.addEventListener('click', () => {
   if (upperLeftBox.textContent === '') {
     state[0][0][0] = playerTurn
     upperLeftBox.textContent = playerTurn
-    addMove(`Player ${playerTurn}: Upper Left Box`)
+    addMoveToList(`Player ${playerTurn}: Upper Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
     setPlayerTurn()
@@ -80,7 +81,7 @@ upperMiddleBox.addEventListener('click', () => {
   if (upperMiddleBox.textContent === '') {
     state[0][0][1] = playerTurn
     upperMiddleBox.textContent = playerTurn
-    addMove(`Player ${playerTurn}: Upper Middle Box`)
+    addMoveToList(`Player ${playerTurn}: Upper Middle Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
     setPlayerTurn()
@@ -91,7 +92,7 @@ upperRightBox.addEventListener('click', () => {
   if (upperRightBox.textContent === '') {
     state[0][0][2] = playerTurn
     upperRightBox.textContent = playerTurn
-    addMove(`Player ${playerTurn}: Upper Right Box`)
+    addMoveToList(`Player ${playerTurn}: Upper Right Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
     setPlayerTurn()
@@ -102,7 +103,7 @@ middleLeftBox.addEventListener('click', () => {
   if (middleLeftBox.textContent === '') {
     state[0][1][0] = playerTurn
     middleLeftBox.textContent = playerTurn
-    addMove(`Player ${playerTurn}: Middle Left Box`)
+    addMoveToList(`Player ${playerTurn}: Middle Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
     setPlayerTurn()
@@ -113,7 +114,7 @@ middleMiddleBox.addEventListener('click', () => {
   if (middleMiddleBox.textContent === '') {
     state[0][1][1] = playerTurn
     middleMiddleBox.textContent = playerTurn
-    addMove(`Player ${playerTurn}: Middle Middle Box`)
+    addMoveToList(`Player ${playerTurn}: Middle Middle Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
     setPlayerTurn()
@@ -124,7 +125,7 @@ middleRightBox.addEventListener('click', () => {
   if (middleRightBox.textContent === '') {
     state[0][1][2] = playerTurn
     middleRightBox.textContent = playerTurn
-    addMove(`Player ${playerTurn}: Middle Right Box`)
+    addMoveToList(`Player ${playerTurn}: Middle Right Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
     setPlayerTurn()
@@ -135,7 +136,7 @@ lowerLeftBox.addEventListener('click', () => {
   if (lowerLeftBox.textContent === '') {
     state[0][2][0] = playerTurn
     lowerLeftBox.textContent = playerTurn
-    addMove(`Player ${playerTurn}: Lower Left Box`)
+    addMoveToList(`Player ${playerTurn}: Lower Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
     setPlayerTurn()
@@ -146,7 +147,7 @@ lowerMiddleBox.addEventListener('click', () => {
   if (lowerMiddleBox.textContent === '') {
     state[0][2][1] = playerTurn
     lowerMiddleBox.textContent = playerTurn
-    addMove(`Player ${playerTurn}: Lower Middle Box`)
+    addMoveToList(`Player ${playerTurn}: Lower Middle Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
     setPlayerTurn()
@@ -157,7 +158,7 @@ lowerRightBox.addEventListener('click', () => {
   if (lowerRightBox.textContent === '') {
     state[0][2][2] = playerTurn
     lowerRightBox.textContent = playerTurn
-    addMove(`Player ${playerTurn}: Lower Right Box`)
+    addMoveToList(`Player ${playerTurn}: Lower Right Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     console.log(moves)
     setPlayerTurn()
