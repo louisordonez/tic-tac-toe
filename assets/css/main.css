@@ -147,8 +147,8 @@ button {
   background-color: var(--white);
   margin: auto;
   padding: 2vmin;
-  width: 80%;
-  height: 80%;
+  padding-bottom: 10vmin;
+  width: 65%;
   border-radius: 1vmin;
 }
 .moves-modal-content h1 {
@@ -157,11 +157,13 @@ button {
   margin-right: 2vmin;
   font-size: 4vmin;
   text-align: center;
+  padding: 0.5vmin;
 }
 .moves-modal-content p {
   color: var(--black);
   margin-left: 2vmin;
   margin-right: 2vmin;
+  padding: 0.5vmin;
   font-size: 3vmin;
   text-align: left;
 }
