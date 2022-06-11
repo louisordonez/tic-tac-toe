@@ -67,7 +67,7 @@ const addMoveToList = (text) => {
 }
 
 // Wining Combination
-const xWinCombo = [
+const crossWinCombo = [
   [
     ['X', 'X', 'X'],
     ['', '', ''],
@@ -110,7 +110,7 @@ const xWinCombo = [
   ],
 ]
 
-const oWinCombo = [
+const circleWinCombo = [
   [
     ['O', 'O', 'O'],
     ['', '', ''],
@@ -157,11 +157,11 @@ const checkScore = () => {
   let combo
 
   if (playerTurn === 'O') {
-    combo = xWinCombo
+    combo = crossWinCombo
   } else {
-    combo = oWinCombo
+    combo = circleWinCombo
   }
-  const showResult = (result) => {
+  const showResults = (result) => {
     if (result === 'draw') {
       playerTurnText.textContent = `Draw`
       winner = true
@@ -178,7 +178,7 @@ const checkScore = () => {
     console.log(`xxx`)
     console.log(`---`)
     console.log(`---`)
-    showResult()
+    showResults()
   } else if (
     state[0][1][0] === combo[1][1][0] &&
     state[0][1][1] === combo[1][1][1] &&
@@ -187,7 +187,7 @@ const checkScore = () => {
     console.log(`---`)
     console.log(`xxx`)
     console.log(`---`)
-    showResult()
+    showResults()
   } else if (
     state[0][2][0] === combo[2][2][0] &&
     state[0][2][1] === combo[2][2][1] &&
@@ -196,7 +196,7 @@ const checkScore = () => {
     console.log(`---`)
     console.log(`---`)
     console.log(`xxx`)
-    showResult()
+    showResults()
   } else if (
     state[0][0][0] === combo[3][0][0] &&
     state[0][1][0] === combo[3][1][0] &&
@@ -205,7 +205,7 @@ const checkScore = () => {
     console.log(`x--`)
     console.log(`x--`)
     console.log(`x--`)
-    showResult()
+    showResults()
   } else if (
     state[0][0][1] === combo[4][0][1] &&
     state[0][1][1] === combo[4][1][1] &&
@@ -214,7 +214,7 @@ const checkScore = () => {
     console.log(`-x-`)
     console.log(`-x-`)
     console.log(`-x-`)
-    showResult()
+    showResults()
   } else if (
     state[0][0][2] === combo[5][0][2] &&
     state[0][1][2] === combo[5][1][2] &&
@@ -223,7 +223,7 @@ const checkScore = () => {
     console.log(`--x`)
     console.log(`--x`)
     console.log(`--x`)
-    showResult()
+    showResults()
   } else if (
     state[0][0][0] === combo[6][0][0] &&
     state[0][1][1] === combo[6][1][1] &&
@@ -232,7 +232,7 @@ const checkScore = () => {
     console.log(`x--`)
     console.log(`-x-`)
     console.log(`--x`)
-    showResult()
+    showResults()
   } else if (
     state[0][0][2] === combo[7][0][2] &&
     state[0][1][1] === combo[7][1][1] &&
@@ -241,7 +241,7 @@ const checkScore = () => {
     console.log(`--x`)
     console.log(`-x-`)
     console.log(`x--`)
-    showResult()
+    showResults()
   } else if (moves.length === 9) {
     const noMovesArr = [
       [
@@ -252,7 +252,7 @@ const checkScore = () => {
     ]
     if (state[0][0] !== noMovesArr[0][0] && state[0][1] !== noMovesArr[0][1] && state[0][2] !== noMovesArr[0][2]) {
       console.log(`draw`)
-      showResult('draw')
+      showResults('draw')
     }
   }
 }
