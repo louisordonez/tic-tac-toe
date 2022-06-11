@@ -12,7 +12,7 @@ const lowerLeftBox = document.querySelector('[data-lower-left]')
 const lowerMiddleBox = document.querySelector('[data-lower-middle]')
 const lowerRightBox = document.querySelector('[data-lower-right]')
 
-//Buttons
+// Buttons
 const redoButton = document.querySelector('[data-redo]')
 const resetButton = document.querySelector('[data-reset]')
 const undoButton = document.querySelector('[data-undo]')
