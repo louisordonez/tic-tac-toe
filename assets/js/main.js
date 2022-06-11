@@ -23,6 +23,16 @@ const movesModal = document.querySelector('[data-moves-modal]')
 const movesModalClose = document.querySelector('[data-moves-modal-close]')
 const movesModalList = document.querySelector('[data-moves-list-container]')
 
+// State and Moves
+let state = [
+  [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', ''],
+  ],
+]
+let moves = []
+
 // Winning Combinations
 const crossWinCombo = [
   [

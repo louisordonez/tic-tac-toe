@@ -1,11 +1,3 @@
-let state = [
-  [
-    ['', '', ''],
-    ['', '', ''],
-    ['', '', ''],
-  ],
-]
-let moves = []
 let playerTurn = 'O'
 let winner = false
 
