@@ -41,6 +41,7 @@ let state = [
 ]
 let moves = []
 let playerTurn = 'O'
+let winner = false
 
 const setPlayerTurn = () => {
   if (playerTurn === 'X') {
@@ -51,11 +52,11 @@ const setPlayerTurn = () => {
 }
 
 const setPlayerTurnText = () => {
-  playerTurnText.textContent = playerTurn
+  playerTurnText.textContent = `Turn: Player ${playerTurn}`
 }
 
 setPlayerTurn()
-playerTurnText.textContent = 'X'
+playerTurnText.textContent = `Turn: Player X`
 
 const addMoveToList = (text) => {
   const newP = document.createElement('p')
@@ -154,16 +155,31 @@ const oWinCombo = [
 
 const checkScore = () => {
   let combo
+
   if (playerTurn === 'O') {
     combo = xWinCombo
   } else {
     combo = oWinCombo
+  }
+  const showResult = (result) => {
+    if (result === 'draw') {
+      playerTurnText.textContent = `Draw`
+      winner = true
+    } else {
+      if (playerTurn === 'O') {
+        playerTurnText.textContent = `Player X Wins`
+        winner = true
+      } else {
+        playerTurnText.textContent = `Player O Wins`
+      }
+    }
   }
   if (state[0][0][0] === combo[0][0][0] && state[0][0][1] === combo[0][0][1] && state[0][0][2] === combo[0][0][2]) {
     console.log(`win`)
     console.log(`xxx`)
     console.log(`---`)
     console.log(`---`)
+    showResult()
   } else if (
     state[0][1][0] === combo[1][1][0] &&
     state[0][1][1] === combo[1][1][1] &&
@@ -173,6 +189,7 @@ const checkScore = () => {
     console.log(`---`)
     console.log(`xxx`)
     console.log(`---`)
+    showResult()
   } else if (
     state[0][2][0] === combo[2][2][0] &&
     state[0][2][1] === combo[2][2][1] &&
@@ -182,6 +199,7 @@ const checkScore = () => {
     console.log(`---`)
     console.log(`---`)
     console.log(`xxx`)
+    showResult()
   } else if (
     state[0][0][0] === combo[3][0][0] &&
     state[0][1][0] === combo[3][1][0] &&
@@ -191,6 +209,7 @@ const checkScore = () => {
     console.log(`x--`)
     console.log(`x--`)
     console.log(`x--`)
+    showResult()
   } else if (
     state[0][0][1] === combo[4][0][1] &&
     state[0][1][1] === combo[4][1][1] &&
@@ -200,6 +219,7 @@ const checkScore = () => {
     console.log(`-x-`)
     console.log(`-x-`)
     console.log(`-x-`)
+    showResult()
   } else if (
     state[0][0][2] === combo[5][0][2] &&
     state[0][1][2] === combo[5][1][2] &&
@@ -209,6 +229,7 @@ const checkScore = () => {
     console.log(`--x`)
     console.log(`--x`)
     console.log(`--x`)
+    showResult()
   } else if (
     state[0][0][0] === combo[6][0][0] &&
     state[0][1][1] === combo[6][1][1] &&
@@ -218,6 +239,7 @@ const checkScore = () => {
     console.log(`x--`)
     console.log(`-x-`)
     console.log(`--x`)
+    showResult()
   } else if (
     state[0][0][2] === combo[7][0][2] &&
     state[0][1][1] === combo[7][1][1] &&
@@ -227,6 +249,7 @@ const checkScore = () => {
     console.log(`--x`)
     console.log(`-x-`)
     console.log(`x--`)
+    showResult()
   } else if (moves.length === 9) {
     const noMovesArr = [
       [
@@ -237,13 +260,14 @@ const checkScore = () => {
     ]
     if (state[0][0] !== noMovesArr[0][0] && state[0][1] !== noMovesArr[0][1] && state[0][2] !== noMovesArr[0][2]) {
       console.log(`draw`)
+      showResult('draw')
     }
   }
 }
 
 // Events
 upperLeftBox.addEventListener('click', () => {
-  if (upperLeftBox.textContent === '') {
+  if (upperLeftBox.textContent === '' && winner == false) {
     state[0][0][0] = playerTurn
     upperLeftBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Upper Left Box`)
@@ -255,7 +279,7 @@ upperLeftBox.addEventListener('click', () => {
   }
 })
 upperMiddleBox.addEventListener('click', () => {
-  if (upperMiddleBox.textContent === '') {
+  if (upperMiddleBox.textContent === '' && winner == false) {
     state[0][0][1] = playerTurn
     upperMiddleBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Upper Middle Box`)
@@ -267,7 +291,7 @@ upperMiddleBox.addEventListener('click', () => {
   }
 })
 upperRightBox.addEventListener('click', () => {
-  if (upperRightBox.textContent === '') {
+  if (upperRightBox.textContent === '' && winner == false) {
     state[0][0][2] = playerTurn
     upperRightBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Upper Right Box`)
@@ -279,7 +303,7 @@ upperRightBox.addEventListener('click', () => {
   }
 })
 middleLeftBox.addEventListener('click', () => {
-  if (middleLeftBox.textContent === '') {
+  if (middleLeftBox.textContent === '' && winner == false) {
     state[0][1][0] = playerTurn
     middleLeftBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Middle Left Box`)
@@ -291,7 +315,7 @@ middleLeftBox.addEventListener('click', () => {
   }
 })
 middleMiddleBox.addEventListener('click', () => {
-  if (middleMiddleBox.textContent === '') {
+  if (middleMiddleBox.textContent === '' && winner == false) {
     state[0][1][1] = playerTurn
     middleMiddleBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Middle Middle Box`)
@@ -303,7 +327,7 @@ middleMiddleBox.addEventListener('click', () => {
   }
 })
 middleRightBox.addEventListener('click', () => {
-  if (middleRightBox.textContent === '') {
+  if (middleRightBox.textContent === '' && winner == false) {
     state[0][1][2] = playerTurn
     middleRightBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Middle Right Box`)
@@ -315,7 +339,7 @@ middleRightBox.addEventListener('click', () => {
   }
 })
 lowerLeftBox.addEventListener('click', () => {
-  if (lowerLeftBox.textContent === '') {
+  if (lowerLeftBox.textContent === '' && winner == false) {
     state[0][2][0] = playerTurn
     lowerLeftBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Lower Left Box`)
@@ -327,7 +351,7 @@ lowerLeftBox.addEventListener('click', () => {
   }
 })
 lowerMiddleBox.addEventListener('click', () => {
-  if (lowerMiddleBox.textContent === '') {
+  if (lowerMiddleBox.textContent === '' && winner == false) {
     state[0][2][1] = playerTurn
     lowerMiddleBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Lower Middle Box`)
@@ -339,7 +363,7 @@ lowerMiddleBox.addEventListener('click', () => {
   }
 })
 lowerRightBox.addEventListener('click', () => {
-  if (lowerRightBox.textContent === '') {
+  if (lowerRightBox.textContent === '' && winner == false) {
     state[0][2][2] = playerTurn
     lowerRightBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Lower Right Box`)
