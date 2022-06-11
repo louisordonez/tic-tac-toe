@@ -2,6 +2,7 @@
 const playerTurnText = document.querySelector('[data-player]')
 
 // Board
+const boxes = document.querySelectorAll('[data-box]')
 const upperLeftBox = document.querySelector('[data-upper-left]')
 const upperMiddleBox = document.querySelector('[data-upper-middle]')
 const upperRightBox = document.querySelector('[data-upper-right]')

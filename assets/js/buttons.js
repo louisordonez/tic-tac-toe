@@ -14,6 +14,8 @@ enableButtons()
 const addMoveToList = (text) => {
   const newP = document.createElement('p')
   const newContent = document.createTextNode(text)
+
+  newP.setAttribute('data-moves-item', '')
   newP.style.fontWeight = '600'
   newP.appendChild(newContent)
   movesModalList.appendChild(newP)
@@ -29,7 +31,7 @@ window.addEventListener('click', (event) => {
 
 // Reset
 const resetGame = () => {
-  const box = document.getElementsByClassName('box')
+  const movesItems = document.querySelectorAll('[data-moves-item]')
 
   done = false
   moves.length = 0
@@ -40,11 +42,14 @@ const resetGame = () => {
       }
     })
   })
-  for (let i = 0; i < box.length; i++) {
-    box[i].textContent = ''
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].textContent = ''
   }
   playerTurn = 'X'
   playerTurnText.textContent = `Turn: Player ${playerTurn}`
+  for (let i = 0; i < movesItems.length; i++) {
+    movesItems[i].remove()
+  }
   enableButtons()
 }
 
