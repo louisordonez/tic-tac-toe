@@ -21,8 +21,11 @@ const movesButton = document.querySelector('[data-moves]')
 
 // Modal
 const movesModal = document.querySelector('[data-moves-modal]')
-const movesModalClose = document.querySelector('[data-moves-modal-close]')
-const movesModalList = document.querySelector('[data-moves-list-container]')
+const movesModalClose = document.querySelector('[data-moves-close]')
+const movesModalListContainer = document.querySelector('[data-moves-list-container]')
+const resultsModal = document.querySelector('[data-results-modal]')
+const resultsModalText = document.querySelector('[data-results-text]')
+const resultsModalClose = document.querySelector('[data-results-close]')
 
 // State and Moves
 let state = [

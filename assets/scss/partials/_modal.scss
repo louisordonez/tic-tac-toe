@@ -1,19 +1,17 @@
 @use './variables' as *;
 
-.moves-modal {
+.modal {
   display: none;
   position: fixed;
   z-index: 1;
   padding-top: 15vmin;
-  // left: 0;
-  // top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.moves-modal-content {
+.modal-content {
   background-color: var(--white);
   margin: auto;
   padding: 2vmin;
@@ -47,7 +45,7 @@
   }
 }
 
-.moves-modal-close {
+.modal-close {
   text-align: right;
   margin-right: 2vmin;
   span {

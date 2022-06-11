@@ -51,7 +51,7 @@ button {
   --dark: var(--gray-900);
 }
 
-.moves-modal-content, .bottom-container button, .box {
+.modal-content, .bottom-container button, .box {
   box-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
@@ -129,7 +129,7 @@ button {
   margin-left: 10vmin;
 }
 
-.moves-modal {
+.modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -140,7 +140,7 @@ button {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.moves-modal-content {
+.modal-content {
   background-color: var(--white);
   margin: auto;
   padding: 2vmin;
@@ -148,7 +148,7 @@ button {
   width: 65%;
   border-radius: 1vmin;
 }
-.moves-modal-content h1 {
+.modal-content h1 {
   color: var(--black);
   margin-left: 2vmin;
   margin-right: 2vmin;
@@ -156,7 +156,7 @@ button {
   text-align: center;
   padding: 0.5vmin;
 }
-.moves-modal-content p {
+.modal-content p {
   color: var(--black);
   margin-left: 2vmin;
   margin-right: 2vmin;
@@ -164,23 +164,23 @@ button {
   font-size: 3vmin;
   text-align: left;
 }
-.moves-modal-content p:nth-child(even) {
+.modal-content p:nth-child(even) {
   background: var(--white);
 }
-.moves-modal-content p:nth-child(odd) {
+.modal-content p:nth-child(odd) {
   background: var(--gray-400);
 }
 
-.moves-modal-close {
+.modal-close {
   text-align: right;
   margin-right: 2vmin;
 }
-.moves-modal-close span {
+.modal-close span {
   font-size: 5vmin;
   font-weight: bold;
   color: var(--black);
 }
-.moves-modal-close span:hover, .moves-modal-close span:focus {
+.modal-close span:hover, .modal-close span:focus {
   color: var(--gray-400);
   text-decoration: none;
   cursor: pointer;
