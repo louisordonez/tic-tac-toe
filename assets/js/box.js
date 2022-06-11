@@ -1,5 +1,5 @@
 upperLeftBox.addEventListener('click', () => {
-  if (upperLeftBox.textContent === '' && winner == false) {
+  if (upperLeftBox.textContent === '' && done === false) {
     state[0][0][0] = playerTurn
     upperLeftBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Upper Left Box`)
@@ -7,10 +7,11 @@ upperLeftBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
+    enableButtons()
   }
 })
 upperMiddleBox.addEventListener('click', () => {
-  if (upperMiddleBox.textContent === '' && winner == false) {
+  if (upperMiddleBox.textContent === '' && done === false) {
     state[0][0][1] = playerTurn
     upperMiddleBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Upper Middle Box`)
@@ -18,10 +19,11 @@ upperMiddleBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
+    enableButtons()
   }
 })
 upperRightBox.addEventListener('click', () => {
-  if (upperRightBox.textContent === '' && winner == false) {
+  if (upperRightBox.textContent === '' && done === false) {
     state[0][0][2] = playerTurn
     upperRightBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Upper Right Box`)
@@ -29,10 +31,11 @@ upperRightBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
+    enableButtons()
   }
 })
 middleLeftBox.addEventListener('click', () => {
-  if (middleLeftBox.textContent === '' && winner == false) {
+  if (middleLeftBox.textContent === '' && done === false) {
     state[0][1][0] = playerTurn
     middleLeftBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Middle Left Box`)
@@ -40,10 +43,11 @@ middleLeftBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
+    enableButtons()
   }
 })
 middleMiddleBox.addEventListener('click', () => {
-  if (middleMiddleBox.textContent === '' && winner == false) {
+  if (middleMiddleBox.textContent === '' && done === false) {
     state[0][1][1] = playerTurn
     middleMiddleBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Middle Middle Box`)
@@ -51,10 +55,11 @@ middleMiddleBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
+    enableButtons()
   }
 })
 middleRightBox.addEventListener('click', () => {
-  if (middleRightBox.textContent === '' && winner == false) {
+  if (middleRightBox.textContent === '' && done === false) {
     state[0][1][2] = playerTurn
     middleRightBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Middle Right Box`)
@@ -62,10 +67,11 @@ middleRightBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
+    enableButtons()
   }
 })
 lowerLeftBox.addEventListener('click', () => {
-  if (lowerLeftBox.textContent === '' && winner == false) {
+  if (lowerLeftBox.textContent === '' && done === false) {
     state[0][2][0] = playerTurn
     lowerLeftBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Lower Left Box`)
@@ -73,10 +79,11 @@ lowerLeftBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
+    enableButtons()
   }
 })
 lowerMiddleBox.addEventListener('click', () => {
-  if (lowerMiddleBox.textContent === '' && winner == false) {
+  if (lowerMiddleBox.textContent === '' && done === false) {
     state[0][2][1] = playerTurn
     lowerMiddleBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Lower Middle Box`)
@@ -84,10 +91,11 @@ lowerMiddleBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
+    enableButtons()
   }
 })
 lowerRightBox.addEventListener('click', () => {
-  if (lowerRightBox.textContent === '' && winner == false) {
+  if (lowerRightBox.textContent === '' && done === false) {
     state[0][2][2] = playerTurn
     lowerRightBox.textContent = playerTurn
     addMoveToList(`Player ${playerTurn}: Lower Right Box`)
@@ -95,5 +103,6 @@ lowerRightBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
+    enableButtons()
   }
 })

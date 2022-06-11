@@ -33,6 +33,14 @@ let state = [
 ]
 let moves = []
 
+const noMoves = [
+  [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', ''],
+  ],
+]
+
 // Winning Combinations
 const crossWinCombo = [
   [

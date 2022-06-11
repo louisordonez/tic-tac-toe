@@ -1,5 +1,5 @@
 let playerTurn = 'O'
-let winner = false
+let done = false
 
 const setPlayerTurn = () => {
   if (playerTurn === 'X') {
@@ -16,11 +16,11 @@ const showPlayerTurnText = () => {
 const showResult = (result) => {
   if (result === 'draw') {
     playerTurnText.textContent = `Draw`
-    winner = true
+    done = true
   } else {
     if (playerTurn === 'O') {
       playerTurnText.textContent = `Player X Wins`
-      winner = true
+      done = true
     } else {
       playerTurnText.textContent = `Player O Wins`
     }
@@ -104,14 +104,7 @@ const checkCombination = () => {
     console.log(`x--`)
     showResult()
   } else if (moves.length === 9) {
-    const noMovesArr = [
-      [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', ''],
-      ],
-    ]
-    if (state[0][0] !== noMovesArr[0][0] && state[0][1] !== noMovesArr[0][1] && state[0][2] !== noMovesArr[0][2]) {
+    if (state[0][0] !== noMoves[0][0] && state[0][1] !== noMoves[0][1] && state[0][2] !== noMoves[0][2]) {
       console.log(`draw`)
       showResult('draw')
     }
