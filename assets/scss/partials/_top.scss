@@ -1,16 +1,41 @@
 @use './variables' as *;
 
-.top {
+.score {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  top: 0;
+  left: 0;
+  padding: 2vmin;
   @extend %text-shadow;
+
+  h1 {
+    font-size: 4vmin;
+  }
+
+  p {
+    font-size: 3vmin;
+  }
+}
+
+.title {
+  padding: 2vmin;
+  @extend %text-shadow;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   h1 {
     font-size: 6vmin;
   }
+}
+
+.player-container {
+  margin-top: 1vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   p {
     font-size: 3vmin;

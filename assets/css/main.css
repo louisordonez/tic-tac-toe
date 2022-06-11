@@ -55,7 +55,7 @@ button {
   box-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
-.top {
+.score, .title {
   text-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
@@ -64,17 +64,39 @@ button {
   top: 0.5vmin;
 }
 
-.top {
+.score {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  top: 0;
+  left: 0;
+  padding: 2vmin;
 }
-.top h1 {
+.score h1 {
+  font-size: 4vmin;
+}
+.score p {
+  font-size: 3vmin;
+}
+
+.title {
+  padding: 2vmin;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-container h1 {
   font-size: 6vmin;
 }
-.top p {
+
+.player-container {
+  margin-top: 1vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player-container p {
   font-size: 3vmin;
 }
 
@@ -154,13 +176,13 @@ button {
   margin-right: 2vmin;
   font-size: 4vmin;
   text-align: center;
-  padding: 0.5vmin;
+  padding: 2vmin;
 }
 .modal-content p {
   color: var(--black);
   margin-left: 2vmin;
   margin-right: 2vmin;
-  padding: 0.5vmin;
+  padding: 1vmin;
   font-size: 3vmin;
   text-align: left;
 }
@@ -189,7 +211,7 @@ button {
 .center {
   position: absolute;
   left: 50%;
-  top: 51%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 

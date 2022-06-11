@@ -22,9 +22,13 @@ const showResults = (result) => {
     if (playerTurn === 'O') {
       playerTurnText.textContent = `Player X Wins`
       resultsModalText.textContent = `Player X Wins`
+      playerCrossScore += 1
+      showScore()
     } else {
       playerTurnText.textContent = `Player O Wins`
       resultsModalText.textContent = `Player O Wins`
+      playerCircleScore += 1
+      showScore()
     }
   }
   resultsModal.style.display = 'block'

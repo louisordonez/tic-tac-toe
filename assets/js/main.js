@@ -1,3 +1,9 @@
+// Score
+const playerCrossScoreText = document.querySelector('[data-player-cross-score]')
+const playerCircleScoreText = document.querySelector('[data-player-circle-score]')
+let playerCrossScore = 0
+let playerCircleScore = 0
+
 // Player
 const playerTurnText = document.querySelector('[data-player]')
 

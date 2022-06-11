@@ -13,6 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/score.js" defer></script>
     <script src="assets/js/board.js" defer></script>
     <script src="assets/js/box.js" defer></script>
     <script src="assets/js/buttons.js" defer></script>
@@ -20,11 +21,39 @@
   </head>
   <body>
     <main>
-      <section class="top">
+      <section class="modal center" data-moves-modal>
+        <div class="modal-content center">
+          <div class="modal-close">
+            <span data-moves-close><i class="fa-solid fa-xmark"></i></span>
+          </div>
+          <div>
+            <h1>Moves</h1>
+          </div>
+          <div data-moves-list-container></div>
+        </div>
+      </section>
+      <section class="modal" data-results-modal>
+        <div class="modal-content center">
+          <div class="modal-close">
+            <span data-results-close><i class="fa-solid fa-xmark"></i></span>
+          </div>
+          <div>
+            <h1 data-results-text></h1>
+          </div>
+        </div>
+      </section>
+      <section class="score">
         <div>
+          <h1>Score</h1>
+          <p data-player-cross-score></p>
+          <p data-player-circle-score></p>
+        </div>
+      </section>
+      <section class="title">
+        <div class="title-container">
           <h1>Tic-Tac-Toe</h1>
         </div>
-        <div>
+        <div class="player-container">
           <p data-player></p>
         </div>
       </section>
@@ -60,27 +89,6 @@
           </div>
           <div class="moves-button">
             <button data-moves><i class="fa-solid fa-clock-rotate-left"></i></button>
-          </div>
-        </div>
-      </section>
-      <section class="modal" data-moves-modal>
-        <div class="modal-content">
-          <div class="modal-close">
-            <span data-moves-close><i class="fa-solid fa-xmark"></i></span>
-          </div>
-          <div>
-            <h1>Moves</h1>
-          </div>
-          <div data-moves-list-container></div>
-        </div>
-      </section>
-      <section class="modal" data-results-modal>
-        <div class="modal-content">
-          <div class="modal-close">
-            <span data-results-close><i class="fa-solid fa-xmark"></i></span>
-          </div>
-          <div>
-            <h1 data-results-text></h1>
           </div>
         </div>
       </section>
