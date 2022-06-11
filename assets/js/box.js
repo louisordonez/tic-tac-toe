@@ -5,8 +5,8 @@ upperLeftBox.addEventListener('click', () => {
     addMoveToList(`Player ${playerTurn}: Upper Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
-    setPlayerTurnText()
-    checkScore()
+    showPlayerTurnText()
+    checkCombination()
   }
 })
 upperMiddleBox.addEventListener('click', () => {
@@ -16,8 +16,8 @@ upperMiddleBox.addEventListener('click', () => {
     addMoveToList(`Player ${playerTurn}: Upper Middle Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
-    setPlayerTurnText()
-    checkScore()
+    showPlayerTurnText()
+    checkCombination()
   }
 })
 upperRightBox.addEventListener('click', () => {
@@ -27,8 +27,8 @@ upperRightBox.addEventListener('click', () => {
     addMoveToList(`Player ${playerTurn}: Upper Right Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
-    setPlayerTurnText()
-    checkScore()
+    showPlayerTurnText()
+    checkCombination()
   }
 })
 middleLeftBox.addEventListener('click', () => {
@@ -38,8 +38,8 @@ middleLeftBox.addEventListener('click', () => {
     addMoveToList(`Player ${playerTurn}: Middle Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
-    setPlayerTurnText()
-    checkScore()
+    showPlayerTurnText()
+    checkCombination()
   }
 })
 middleMiddleBox.addEventListener('click', () => {
@@ -49,8 +49,8 @@ middleMiddleBox.addEventListener('click', () => {
     addMoveToList(`Player ${playerTurn}: Middle Middle Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
-    setPlayerTurnText()
-    checkScore()
+    showPlayerTurnText()
+    checkCombination()
   }
 })
 middleRightBox.addEventListener('click', () => {
@@ -60,8 +60,8 @@ middleRightBox.addEventListener('click', () => {
     addMoveToList(`Player ${playerTurn}: Middle Right Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
-    setPlayerTurnText()
-    checkScore()
+    showPlayerTurnText()
+    checkCombination()
   }
 })
 lowerLeftBox.addEventListener('click', () => {
@@ -71,8 +71,8 @@ lowerLeftBox.addEventListener('click', () => {
     addMoveToList(`Player ${playerTurn}: Lower Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
-    setPlayerTurnText()
-    checkScore()
+    showPlayerTurnText()
+    checkCombination()
   }
 })
 lowerMiddleBox.addEventListener('click', () => {
@@ -82,8 +82,8 @@ lowerMiddleBox.addEventListener('click', () => {
     addMoveToList(`Player ${playerTurn}: Lower Middle Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
-    setPlayerTurnText()
-    checkScore()
+    showPlayerTurnText()
+    checkCombination()
   }
 })
 lowerRightBox.addEventListener('click', () => {
@@ -93,7 +93,7 @@ lowerRightBox.addEventListener('click', () => {
     addMoveToList(`Player ${playerTurn}: Lower Right Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
-    setPlayerTurnText()
-    checkScore()
+    showPlayerTurnText()
+    checkCombination()
   }
 })

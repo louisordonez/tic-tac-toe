@@ -17,14 +17,25 @@ const setPlayerTurn = () => {
   }
 }
 
-const setPlayerTurnText = () => {
+const showPlayerTurnText = () => {
   playerTurnText.textContent = `Turn: Player ${playerTurn}`
 }
 
-setPlayerTurn()
-playerTurnText.textContent = `Turn: Player X`
+const showResult = (result) => {
+  if (result === 'draw') {
+    playerTurnText.textContent = `Draw`
+    winner = true
+  } else {
+    if (playerTurn === 'O') {
+      playerTurnText.textContent = `Player X Wins`
+      winner = true
+    } else {
+      playerTurnText.textContent = `Player O Wins`
+    }
+  }
+}
 
-const checkScore = () => {
+const checkCombination = () => {
   let combo
 
   if (playerTurn === 'O') {
@@ -32,24 +43,11 @@ const checkScore = () => {
   } else {
     combo = circleWinCombo
   }
-  const showResults = (result) => {
-    if (result === 'draw') {
-      playerTurnText.textContent = `Draw`
-      winner = true
-    } else {
-      if (playerTurn === 'O') {
-        playerTurnText.textContent = `Player X Wins`
-        winner = true
-      } else {
-        playerTurnText.textContent = `Player O Wins`
-      }
-    }
-  }
   if (state[0][0][0] === combo[0][0][0] && state[0][0][1] === combo[0][0][1] && state[0][0][2] === combo[0][0][2]) {
     console.log(`xxx`)
     console.log(`---`)
     console.log(`---`)
-    showResults()
+    showResult()
   } else if (
     state[0][1][0] === combo[1][1][0] &&
     state[0][1][1] === combo[1][1][1] &&
@@ -58,7 +56,7 @@ const checkScore = () => {
     console.log(`---`)
     console.log(`xxx`)
     console.log(`---`)
-    showResults()
+    showResult()
   } else if (
     state[0][2][0] === combo[2][2][0] &&
     state[0][2][1] === combo[2][2][1] &&
@@ -67,7 +65,7 @@ const checkScore = () => {
     console.log(`---`)
     console.log(`---`)
     console.log(`xxx`)
-    showResults()
+    showResult()
   } else if (
     state[0][0][0] === combo[3][0][0] &&
     state[0][1][0] === combo[3][1][0] &&
@@ -76,7 +74,7 @@ const checkScore = () => {
     console.log(`x--`)
     console.log(`x--`)
     console.log(`x--`)
-    showResults()
+    showResult()
   } else if (
     state[0][0][1] === combo[4][0][1] &&
     state[0][1][1] === combo[4][1][1] &&
@@ -85,7 +83,7 @@ const checkScore = () => {
     console.log(`-x-`)
     console.log(`-x-`)
     console.log(`-x-`)
-    showResults()
+    showResult()
   } else if (
     state[0][0][2] === combo[5][0][2] &&
     state[0][1][2] === combo[5][1][2] &&
@@ -94,7 +92,7 @@ const checkScore = () => {
     console.log(`--x`)
     console.log(`--x`)
     console.log(`--x`)
-    showResults()
+    showResult()
   } else if (
     state[0][0][0] === combo[6][0][0] &&
     state[0][1][1] === combo[6][1][1] &&
@@ -103,7 +101,7 @@ const checkScore = () => {
     console.log(`x--`)
     console.log(`-x-`)
     console.log(`--x`)
-    showResults()
+    showResult()
   } else if (
     state[0][0][2] === combo[7][0][2] &&
     state[0][1][1] === combo[7][1][1] &&
@@ -112,7 +110,7 @@ const checkScore = () => {
     console.log(`--x`)
     console.log(`-x-`)
     console.log(`x--`)
-    showResults()
+    showResult()
   } else if (moves.length === 9) {
     const noMovesArr = [
       [
@@ -123,7 +121,10 @@ const checkScore = () => {
     ]
     if (state[0][0] !== noMovesArr[0][0] && state[0][1] !== noMovesArr[0][1] && state[0][2] !== noMovesArr[0][2]) {
       console.log(`draw`)
-      showResults('draw')
+      showResult('draw')
     }
   }
 }
+
+setPlayerTurn()
+playerTurnText.textContent = `Turn: Player X`
