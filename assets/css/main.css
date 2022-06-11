@@ -77,9 +77,6 @@ button {
 .top p {
   font-size: 3vmin;
 }
-.top span {
-  font-size: 3vmin;
-}
 
 .board-container {
   display: flex;
