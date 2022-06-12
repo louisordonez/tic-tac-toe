@@ -59,8 +59,6 @@
     border-radius: 1vmin;
     border: none;
     background-color: var(--green);
-    // @extend %box-shadow;
-    // @extend %hover-move;
 
     &:hover {
       background-color: var(--green-light);
