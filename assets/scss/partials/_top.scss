@@ -5,7 +5,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 2vmin;
+  padding-top: 2vmin;
+  padding-left: 3vmin;
   @extend %text-shadow;
 
   h1 {
