@@ -53,14 +53,14 @@
 
   button {
     padding: 0 3.4vmin;
-    margin-top: 51vmin;
+    margin-top: 5vmin;
     margin-left: 1vmin;
     margin-right: 1vmin;
     border-radius: 1vmin;
     border: none;
     background-color: var(--green);
-    @extend %box-shadow;
-    @extend %hover-move;
+    // @extend %box-shadow;
+    // @extend %hover-move;
 
     &:hover {
       background-color: var(--green-light);
