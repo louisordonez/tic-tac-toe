@@ -2,8 +2,8 @@ upperLeftBox.addEventListener('click', () => {
   if (upperLeftBox.textContent === '' && done === false) {
     state[0][0][0] = playerTurn
     upperLeftBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Upper Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
+    addMoveToList(`${playerTurnName}: Upper Left Box`)
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
@@ -14,7 +14,7 @@ upperCenterBox.addEventListener('click', () => {
   if (upperCenterBox.textContent === '' && done === false) {
     state[0][0][1] = playerTurn
     upperCenterBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Upper Center Box`)
+    addMoveToList(`${playerTurnName}: Upper Center Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()
@@ -26,7 +26,7 @@ upperRightBox.addEventListener('click', () => {
   if (upperRightBox.textContent === '' && done === false) {
     state[0][0][2] = playerTurn
     upperRightBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Upper Right Box`)
+    addMoveToList(`${playerTurnName}: Upper Right Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()
@@ -38,7 +38,7 @@ middleLeftBox.addEventListener('click', () => {
   if (middleLeftBox.textContent === '' && done === false) {
     state[0][1][0] = playerTurn
     middleLeftBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Middle Left Box`)
+    addMoveToList(`${playerTurnName}: Middle Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()
@@ -50,7 +50,7 @@ middleCenterBox.addEventListener('click', () => {
   if (middleCenterBox.textContent === '' && done === false) {
     state[0][1][1] = playerTurn
     middleCenterBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Middle Center Box`)
+    addMoveToList(`${playerTurnName}: Middle Center Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()
@@ -62,7 +62,7 @@ middleRightBox.addEventListener('click', () => {
   if (middleRightBox.textContent === '' && done === false) {
     state[0][1][2] = playerTurn
     middleRightBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Middle Right Box`)
+    addMoveToList(`${playerTurnName}: Middle Right Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()
@@ -74,7 +74,7 @@ lowerLeftBox.addEventListener('click', () => {
   if (lowerLeftBox.textContent === '' && done === false) {
     state[0][2][0] = playerTurn
     lowerLeftBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Lower Left Box`)
+    addMoveToList(`${playerTurnName}: Lower Left Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()
@@ -86,7 +86,7 @@ lowerCenterBox.addEventListener('click', () => {
   if (lowerCenterBox.textContent === '' && done === false) {
     state[0][2][1] = playerTurn
     lowerCenterBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Lower Center Box`)
+    addMoveToList(`${playerTurnName}: Lower Center Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()
@@ -98,7 +98,7 @@ lowerRightBox.addEventListener('click', () => {
   if (lowerRightBox.textContent === '' && done === false) {
     state[0][2][2] = playerTurn
     lowerRightBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Lower Right Box`)
+    addMoveToList(`${playerTurnName}: Lower Right Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()

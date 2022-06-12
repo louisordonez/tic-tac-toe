@@ -1,6 +1,10 @@
 // Setup
 const setupSection = document.querySelector('[data-setup]')
 const startButton = document.querySelector('[data-start]')
+const playerCrossNameInput = document.querySelector('[data-player-cross-name]')
+const playerCircleNameInput = document.querySelector('[data-player-circle-name]')
+let playerCrossName
+let playerCircleName
 
 // Main
 const mainSection = document.querySelector('[data-main]')

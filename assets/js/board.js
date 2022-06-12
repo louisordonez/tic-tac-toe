@@ -1,16 +1,19 @@
 let playerTurn = 'O'
 let done = false
+let playerTurnName
 
 const setPlayerTurn = () => {
   if (playerTurn === 'X') {
     playerTurn = 'O'
+    playerTurnName = playerCircleName
   } else if (playerTurn === 'O') {
     playerTurn = 'X'
+    playerTurnName = playerCrossName
   }
 }
 
 const showPlayerTurnText = () => {
-  playerTurnText.textContent = `Turn: Player ${playerTurn}`
+  playerTurnText.textContent = `Turn: ${playerTurnName}`
 }
 
 const showResults = (result) => {
@@ -121,6 +124,3 @@ const checkCombination = () => {
     }
   }
 }
-
-setPlayerTurn()
-playerTurnText.textContent = `Turn: Player X`

@@ -52,8 +52,8 @@ button {
   --green-light: #28a745;
 }
 
-.modal-content, .bottom-container button, .box, .setup-container button, .setup-player-x,
-.setup-player-y {
+.modal-content, .bottom-container button, .box, .setup-container button, .setup-player-cross,
+.setup-player-circle {
   box-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
@@ -61,8 +61,8 @@ button {
   text-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
-.bottom-container button:hover, .box:hover, .setup-container button:hover, .setup-player-x:hover,
-.setup-player-y:hover {
+.bottom-container button:hover, .box:hover, .setup-container button:hover, .setup-player-cross:hover,
+.setup-player-circle:hover {
   position: relative;
   top: 0.5vmin;
 }
@@ -79,6 +79,16 @@ button {
 }
 .setup-title-container h1 {
   font-size: 6vmin;
+}
+
+.setup-subtitle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vmin;
+}
+.setup-subtitle-container p {
+  font-size: 3vmin;
 }
 
 .setup {
@@ -106,7 +116,7 @@ button {
 }
 .setup-container button {
   padding: 0 3.4vmin;
-  margin-top: 55vmin;
+  margin-top: 51vmin;
   margin-left: 1vmin;
   margin-right: 1vmin;
   border-radius: 1vmin;
@@ -122,8 +132,8 @@ button {
   font-size: 3vmin;
 }
 
-.setup-player-x,
-.setup-player-y {
+.setup-player-cross,
+.setup-player-circle {
   color: var(--black);
   background-color: var(--white);
   margin-left: 5vmin;
@@ -133,10 +143,29 @@ button {
   border-radius: 1.6vmin;
   text-align: center;
 }
-.setup-player-x h1,
-.setup-player-y h1 {
+.setup-player-cross:focus,
+.setup-player-circle:focus {
+  outline: 0.5px solid var(--black);
+}
+.setup-player-cross h1,
+.setup-player-circle h1 {
   padding-top: 4vmin;
   font-size: 3.5vmin;
+}
+.setup-player-cross input[type=text],
+.setup-player-circle input[type=text] {
+  margin-top: 6vmin;
+  font-size: 3vmin;
+  text-align: center;
+  width: 80%;
+  padding: 1.2vmin 2vmin;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 0.5vmin solid var(--black);
+}
+.setup-player-cross input[type=text]:focus,
+.setup-player-circle input[type=text]:focus {
+  outline: none;
 }
 
 .score {

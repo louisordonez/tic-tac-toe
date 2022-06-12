@@ -16,6 +16,17 @@
   }
 }
 
+.setup-subtitle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vmin;
+
+  p {
+    font-size: 3vmin;
+  }
+}
+
 .setup {
   display: block;
   position: absolute;
@@ -42,7 +53,7 @@
 
   button {
     padding: 0 3.4vmin;
-    margin-top: 55vmin;
+    margin-top: 51vmin;
     margin-left: 1vmin;
     margin-right: 1vmin;
     border-radius: 1vmin;
@@ -63,8 +74,8 @@
   }
 }
 
-.setup-player-x,
-.setup-player-y {
+.setup-player-cross,
+.setup-player-circle {
   color: var(--black);
   background-color: var(--white);
   margin-left: 5vmin;
@@ -76,8 +87,27 @@
   @extend %hover-move;
   text-align: center;
 
+  &:focus {
+    outline: 0.5px solid var(--black);
+  }
+
   h1 {
     padding-top: 4vmin;
     font-size: 3.5vmin;
+  }
+
+  input[type='text'] {
+    margin-top: 6vmin;
+    font-size: 3vmin;
+    text-align: center;
+    width: 80%;
+    padding: 1.2vmin 2vmin;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 0.5vmin solid var(--black);
+
+    &:focus {
+      outline: none;
+    }
   }
 }

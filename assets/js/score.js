@@ -1,6 +1,4 @@
 const showScore = () => {
-  playerCrossScoreText.textContent = `Player X: ${playerCrossScore}`
-  playerCircleScoreText.textContent = `Player O: ${playerCircleScore}`
+  playerCrossScoreText.textContent = `${playerCrossName}: ${playerCrossScore}`
+  playerCircleScoreText.textContent = `${playerCircleName}: ${playerCircleScore}`
 }
-
-showScore()
