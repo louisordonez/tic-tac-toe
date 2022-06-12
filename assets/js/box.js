@@ -10,11 +10,11 @@ upperLeftBox.addEventListener('click', () => {
     enableButtons()
   }
 })
-upperMiddleBox.addEventListener('click', () => {
-  if (upperMiddleBox.textContent === '' && done === false) {
+upperCenterBox.addEventListener('click', () => {
+  if (upperCenterBox.textContent === '' && done === false) {
     state[0][0][1] = playerTurn
-    upperMiddleBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Upper Middle Box`)
+    upperCenterBox.textContent = playerTurn
+    addMoveToList(`Player ${playerTurn}: Upper Center Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()
@@ -46,11 +46,11 @@ middleLeftBox.addEventListener('click', () => {
     enableButtons()
   }
 })
-middleMiddleBox.addEventListener('click', () => {
-  if (middleMiddleBox.textContent === '' && done === false) {
+middleCenterBox.addEventListener('click', () => {
+  if (middleCenterBox.textContent === '' && done === false) {
     state[0][1][1] = playerTurn
-    middleMiddleBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Middle Middle Box`)
+    middleCenterBox.textContent = playerTurn
+    addMoveToList(`Player ${playerTurn}: Middle Center Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()
@@ -82,11 +82,11 @@ lowerLeftBox.addEventListener('click', () => {
     enableButtons()
   }
 })
-lowerMiddleBox.addEventListener('click', () => {
-  if (lowerMiddleBox.textContent === '' && done === false) {
+lowerCenterBox.addEventListener('click', () => {
+  if (lowerCenterBox.textContent === '' && done === false) {
     state[0][2][1] = playerTurn
-    lowerMiddleBox.textContent = playerTurn
-    addMoveToList(`Player ${playerTurn}: Lower Middle Box`)
+    lowerCenterBox.textContent = playerTurn
+    addMoveToList(`Player ${playerTurn}: Lower Center Box`)
     moves.push(JSON.parse(JSON.stringify(state)))
     setPlayerTurn()
     showPlayerTurnText()

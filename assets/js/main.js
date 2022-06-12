@@ -10,13 +10,13 @@ const playerTurnText = document.querySelector('[data-player]')
 // Board
 const boxes = document.querySelectorAll('[data-box]')
 const upperLeftBox = document.querySelector('[data-upper-left]')
-const upperMiddleBox = document.querySelector('[data-upper-middle]')
+const upperCenterBox = document.querySelector('[data-upper-center]')
 const upperRightBox = document.querySelector('[data-upper-right]')
 const middleLeftBox = document.querySelector('[data-middle-left]')
-const middleMiddleBox = document.querySelector('[data-middle-middle]')
+const middleCenterBox = document.querySelector('[data-middle-center]')
 const middleRightBox = document.querySelector('[data-middle-right]')
 const lowerLeftBox = document.querySelector('[data-lower-left]')
-const lowerMiddleBox = document.querySelector('[data-lower-middle]')
+const lowerCenterBox = document.querySelector('[data-lower-center]')
 const lowerRightBox = document.querySelector('[data-lower-right]')
 
 // Buttons
