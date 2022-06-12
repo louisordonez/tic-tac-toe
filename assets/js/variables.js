@@ -1,3 +1,10 @@
+// Setup
+const setupSection = document.querySelector('[data-setup]')
+const startButton = document.querySelector('[data-start]')
+
+// Main
+const mainSection = document.querySelector('[data-main]')
+
 // Score
 const playerCrossScoreText = document.querySelector('[data-player-cross-score]')
 const playerCircleScoreText = document.querySelector('[data-player-circle-score]')

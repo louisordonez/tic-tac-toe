@@ -49,19 +49,94 @@ button {
   --danger: var(--red);
   --light: var(--gray-100);
   --dark: var(--gray-900);
+  --green-light: #28a745;
 }
 
-.modal-content, .bottom-container button, .box {
+.modal-content, .bottom-container button, .box, .setup-container button, .setup-player-x,
+.setup-player-y {
   box-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
-.score, .title {
+.score, .title, .setup-title {
   text-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
-.bottom-container button:hover, .box:hover {
+.bottom-container button:hover, .box:hover, .setup-container button:hover, .setup-player-x:hover,
+.setup-player-y:hover {
   position: relative;
   top: 0.5vmin;
+}
+
+.setup-title {
+  padding: 2vmin;
+}
+
+.setup-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12vmin;
+}
+.setup-title-container h1 {
+  font-size: 6vmin;
+}
+
+.setup {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.setup > div {
+  padding: 0;
+  padding-bottom: 0;
+}
+
+.setup-container {
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.setup-container button {
+  padding: 0 3.4vmin;
+  margin-top: 55vmin;
+  margin-left: 1vmin;
+  margin-right: 1vmin;
+  border-radius: 1vmin;
+  border: none;
+  background-color: var(--green);
+}
+.setup-container button:hover {
+  background-color: var(--green-light);
+}
+.setup-container button i {
+  padding: 1.5vmin;
+  padding-top: 1.8vmin;
+  font-size: 3vmin;
+}
+
+.setup-player-x,
+.setup-player-y {
+  color: var(--black);
+  background-color: var(--white);
+  margin-left: 5vmin;
+  margin-right: 5vmin;
+  width: 40vmin;
+  height: 40vmin;
+  border-radius: 1.6vmin;
+  text-align: center;
+}
+.setup-player-x h1,
+.setup-player-y h1 {
+  padding-top: 4vmin;
+  font-size: 3.5vmin;
 }
 
 .score {
@@ -159,7 +234,6 @@ button {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 15vmin;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -210,6 +284,10 @@ button {
   color: var(--gray-400);
   text-decoration: none;
   cursor: pointer;
+}
+
+.main {
+  display: none;
 }
 
 .center {

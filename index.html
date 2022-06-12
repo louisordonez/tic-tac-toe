@@ -12,7 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/variables.js" defer></script>
+    <script src="assets/js/setup.js" defer></script>
     <script src="assets/js/score.js" defer></script>
     <script src="assets/js/board.js" defer></script>
     <script src="assets/js/box.js" defer></script>
@@ -20,7 +21,27 @@
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
-    <main>
+    <section class="setup" data-setup>
+      <div class="setup-title">
+        <div class="setup-title-container">
+          <h1>Tic-Tac-Toe</h1>
+        </div>
+      </div>
+      <div class="setup-container">
+        <button data-start><i class="fa-solid fa-play"></i></button>
+      </div>
+      <div class="setup-container">
+        <div>
+          <div class="setup-player-x">
+            <h1>Player X</h1>
+          </div>
+        </div>
+        <div class="setup-player-y">
+          <h1>Player Y</h1>
+        </div>
+      </div>
+    </section>
+    <div class="main" data-main>
       <section class="modal center" data-moves-modal>
         <div class="modal-content center">
           <div class="modal-close">
@@ -92,6 +113,6 @@
           </div>
         </div>
       </section>
-    </main>
+    </div>
   </body>
 </html>
