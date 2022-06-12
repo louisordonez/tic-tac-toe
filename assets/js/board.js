@@ -1,7 +1,3 @@
-let playerTurn = 'O'
-let done = false
-let playerTurnName
-
 const setPlayerTurn = () => {
   if (playerTurn === 'X') {
     playerTurn = 'O'

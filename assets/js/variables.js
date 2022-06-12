@@ -1,10 +1,13 @@
 // Setup
 const setupSection = document.querySelector('[data-setup]')
-const startButton = document.querySelector('[data-start]')
+const startCrossButton = document.querySelector('[data-start-cross]')
+const startCircleButton = document.querySelector('[data-start-circle]')
 const playerCrossNameInput = document.querySelector('[data-player-cross-name]')
 const playerCircleNameInput = document.querySelector('[data-player-circle-name]')
+let playerTurn
 let playerCrossName
 let playerCircleName
+let playerTurnName
 
 // Main
 const mainSection = document.querySelector('[data-main]')
@@ -45,6 +48,7 @@ const resultsModalText = document.querySelector('[data-results-text]')
 const resultsModalClose = document.querySelector('[data-results-close]')
 
 // State and Moves
+let done = false
 let state = [
   [
     ['', '', ''],
@@ -53,7 +57,6 @@ let state = [
   ],
 ]
 let moves = []
-
 const noMoves = [
   [
     ['', '', ''],
@@ -105,7 +108,6 @@ const crossWinCombo = [
     ['X', '', ''],
   ],
 ]
-
 const circleWinCombo = [
   [
     ['O', 'O', 'O'],

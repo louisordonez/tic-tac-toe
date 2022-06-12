@@ -53,7 +53,6 @@ const resetGame = () => {
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].textContent = ''
   }
-  playerTurn = 'O'
   setPlayerTurn()
   showPlayerTurnText()
   for (let i = 0; i < movesItems.length; i++) {
