@@ -23,13 +23,13 @@ const showResults = (result) => {
     resultsModalText.textContent = `Draw`
   } else {
     if (playerTurn === 'O') {
-      playerTurnText.textContent = `Player X Wins`
-      resultsModalText.textContent = `Player X Wins`
+      playerTurnText.textContent = `${playerCrossName} Wins!`
+      resultsModalText.textContent = `${playerCrossName} Wins!`
       playerCrossScore += 1
       showScore()
     } else {
-      playerTurnText.textContent = `Player O Wins`
-      resultsModalText.textContent = `Player O Wins`
+      playerTurnText.textContent = `${playerCircleName} Wins!`
+      resultsModalText.textContent = `${playerCircleName} Wins!`
       playerCircleScore += 1
       showScore()
     }
