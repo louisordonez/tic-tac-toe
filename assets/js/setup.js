@@ -1,7 +1,6 @@
 const setPlayerName = () => {
   playerCrossName = playerCrossNameInput.value
   playerCircleName = playerCircleNameInput.value
-
   if (playerCrossName === '' && playerCircleName !== '') {
     playerCrossName = 'Player X'
   } else if (playerCrossName !== '' && playerCircleName === '') {
@@ -21,7 +20,6 @@ startCrossButton.addEventListener('click', () => {
   setPlayerTurn()
   showPlayerTurnText()
 })
-
 startCircleButton.addEventListener('click', () => {
   playerTurn = 'X'
   setupSection.style.display = 'none'

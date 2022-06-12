@@ -8,8 +8,6 @@ const enableButtons = () => {
   }
 }
 
-enableButtons()
-
 // Moves
 const addMoveToList = (text) => {
   const newP = document.createElement('p')
@@ -20,22 +18,6 @@ const addMoveToList = (text) => {
   newP.appendChild(newContent)
   movesModalListContainer.appendChild(newP)
 }
-
-movesButton.addEventListener('click', () => (movesModal.style.display = 'block'))
-movesModalClose.addEventListener('click', () => (movesModal.style.display = 'none'))
-window.addEventListener('click', (event) => {
-  if (event.target == movesModal) {
-    movesModal.style.display = 'none'
-  }
-})
-
-// Results
-resultsModalClose.addEventListener('click', () => (resultsModal.style.display = 'none'))
-window.addEventListener('click', (event) => {
-  if (event.target == resultsModal) {
-    resultsModal.style.display = 'none'
-  }
-})
 
 // Reset
 const resetGame = () => {
@@ -61,4 +43,19 @@ const resetGame = () => {
   enableButtons()
 }
 
+movesButton.addEventListener('click', () => (movesModal.style.display = 'block'))
+movesModalClose.addEventListener('click', () => (movesModal.style.display = 'none'))
+window.addEventListener('click', (event) => {
+  if (event.target == movesModal) {
+    movesModal.style.display = 'none'
+  }
+})
+resultsModalClose.addEventListener('click', () => (resultsModal.style.display = 'none'))
+window.addEventListener('click', (event) => {
+  if (event.target == resultsModal) {
+    resultsModal.style.display = 'none'
+  }
+})
 resetButton.addEventListener('click', () => resetGame())
+
+enableButtons()
