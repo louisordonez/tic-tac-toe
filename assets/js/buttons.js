@@ -11,7 +11,6 @@ const addMoveToList = (text) => {
 
 const enableButtons = () => {
   if (done === true) {
-    movesIndex = moves.length - 1
     undoButton.disabled = false
   } else {
     redoButton.disabled = true
@@ -58,17 +57,6 @@ redoButton.addEventListener('click', () => {
 const resetGame = () => {
   const movesItems = document.querySelectorAll('[data-moves-item]')
 
-  done = false
-  moves.length = 0
-  moves = [
-    [
-      ['', '', ''],
-      ['', '', ''],
-      ['', '', ''],
-    ],
-  ]
-  movesFlat = undefined
-  movesIndex = undefined
   state.forEach((rows) => {
     rows.forEach((innerRows) => {
       for (let i = 0; i < innerRows.length; i++) {
@@ -84,6 +72,7 @@ const resetGame = () => {
   }
   setPlayerTurn()
   showPlayerTurnText()
+  setInitialState()
   enableButtons()
 }
 
@@ -101,4 +90,3 @@ window.addEventListener('click', (event) => {
   }
 })
 resetButton.addEventListener('click', () => resetGame())
-enableButtons()

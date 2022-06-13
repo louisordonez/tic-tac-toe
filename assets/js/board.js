@@ -1,5 +1,18 @@
+const setInitialState = () => {
+  done = false
+  moves.length = 0
+  moves.push(JSON.parse(JSON.stringify(noMoves)))
+  movesFlat = undefined
+  movesIndex = undefined
+}
+
+const setPlayerMove = () => {
+  moves.push(JSON.parse(JSON.stringify(state)))
+}
+
 const showResults = (result) => {
   done = true
+  movesIndex = moves.length - 1
   if (result === 'draw') {
     playerTurnText.textContent = `Draw`
     resultsModalText.textContent = `Draw`

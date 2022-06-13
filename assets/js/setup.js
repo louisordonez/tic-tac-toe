@@ -12,7 +12,7 @@ const setPlayerName = () => {
   setScore()
 }
 
-const setPlayer = (player) => {
+const setGame = (player) => {
   if (player === 'O') {
     playerTurn = 'O'
   } else {
@@ -23,11 +23,13 @@ const setPlayer = (player) => {
   setPlayerName()
   setPlayerTurn()
   showPlayerTurnText()
+  setInitialState()
+  enableButtons()
 }
 
 startCrossButton.addEventListener('click', () => {
-  setPlayer('O')
+  setGame('O')
 })
 startCircleButton.addEventListener('click', () => {
-  setPlayer('X')
+  setGame('X')
 })
