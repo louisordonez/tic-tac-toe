@@ -34,7 +34,7 @@ const showResults = (result) => {
 }
 
 const checkCombination = () => {
-  let combo
+  let comb
 
   if (playerTurn === 'O') {
     combo = crossWinCombo
@@ -113,7 +113,7 @@ const checkCombination = () => {
     state[0][2][0] === combo[7][2][0]
   ) {
     showResults()
-  } else if (moves.length === 9) {
+  } else if (moves.length === 10) {
     // Draw
     if (state[0][0] !== noMoves[0][0] && state[0][1] !== noMoves[0][1] && state[0][2] !== noMoves[0][2]) {
       showResults('draw')

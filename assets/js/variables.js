@@ -56,7 +56,14 @@ let state = [
     ['', '', ''],
   ],
 ]
-let moves = []
+let moves = [
+  [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', ''],
+  ],
+]
+let movesIndex
 const noMoves = [
   [
     ['', '', ''],
