@@ -78,10 +78,13 @@ const checkCombination = () => {
     state[0][2][0] === combo[7][2][0]
   ) {
     showResults()
-  } else if (moves.length === 10) {
+  } else if (
     // Draw
-    if (state[0][0] !== noMoves[0][0] && state[0][1] !== noMoves[0][1] && state[0][2] !== noMoves[0][2]) {
-      showResults('draw')
-    }
+    state[0][0] !== noMoves[0][0] &&
+    state[0][1] !== noMoves[0][1] &&
+    state[0][2] !== noMoves[0][2] &&
+    moves.length === 10
+  ) {
+    showResults('draw')
   }
 }

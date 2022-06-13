@@ -1,7 +1,7 @@
 const showResults = (result) => {
   if (result === 'draw') {
-    playerTurnText.textContent = `Draw`
-    resultsModalText.textContent = `Draw`
+    playerTurnText.textContent = `Draw!`
+    resultsModalText.textContent = `Draw!`
   } else {
     if (playerTurn === 'O') {
       playerTurnText.textContent = `${playerCrossName} wins!`
