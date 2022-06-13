@@ -13,7 +13,7 @@ const setPlayerName = () => {
 }
 
 const setGame = (player) => {
-  // Set Initial Current Player Turn
+  // Set initial current player turn
   if (player === 'X') {
     playerTurn = 'X'
   } else {
