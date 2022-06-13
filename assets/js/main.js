@@ -48,7 +48,7 @@ const resultsModalText = document.querySelector('[data-results-text]')
 const resultsModalClose = document.querySelector('[data-results-close]')
 
 // State and Moves
-let done = false
+let done
 let state = [
   [
     ['', '', ''],
@@ -152,3 +152,20 @@ const circleWinCombo = [
     ['O', '', ''],
   ],
 ]
+
+const setGameStatus = (status) => {
+  if (status === true) {
+    done = true
+    movesIndex = moves.length - 1
+  } else {
+    done = false
+  }
+}
+
+const setInitialState = () => {
+  setGameStatus(false)
+  moves.length = 0
+  moves.push(JSON.parse(JSON.stringify(noMoves)))
+  movesFlat = undefined
+  movesIndex = undefined
+}

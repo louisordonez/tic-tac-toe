@@ -13,10 +13,11 @@ const setPlayerName = () => {
 }
 
 const setGame = (player) => {
-  if (player === 'O') {
-    playerTurn = 'O'
-  } else {
+  // Set Initial Current Player Turn
+  if (player === 'X') {
     playerTurn = 'X'
+  } else {
+    playerTurn = 'O'
   }
   setupSection.style.display = 'none'
   mainSection.style.display = 'block'
@@ -24,7 +25,7 @@ const setGame = (player) => {
   setPlayerTurn()
   showPlayerTurnText()
   setInitialState()
-  enableButtons()
+  setButtons()
 }
 
 startCrossButton.addEventListener('click', () => {

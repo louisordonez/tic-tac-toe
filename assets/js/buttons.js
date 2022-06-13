@@ -1,15 +1,4 @@
-// Moves
-const addMoveToList = (text) => {
-  const newP = document.createElement('p')
-  const newContent = document.createTextNode(text)
-
-  newP.setAttribute('data-moves-item', '')
-  newP.style.fontWeight = '600'
-  newP.appendChild(newContent)
-  movesModalListContainer.appendChild(newP)
-}
-
-const enableButtons = () => {
+const setButtons = () => {
   if (done === true) {
     undoButton.disabled = false
   } else {
@@ -73,20 +62,8 @@ const resetGame = () => {
   setPlayerTurn()
   showPlayerTurnText()
   setInitialState()
-  enableButtons()
+  setButtons()
 }
 
 movesButton.addEventListener('click', () => (movesModal.style.display = 'block'))
-movesModalClose.addEventListener('click', () => (movesModal.style.display = 'none'))
-window.addEventListener('click', (event) => {
-  if (event.target == movesModal) {
-    movesModal.style.display = 'none'
-  }
-})
-resultsModalClose.addEventListener('click', () => (resultsModal.style.display = 'none'))
-window.addEventListener('click', (event) => {
-  if (event.target == resultsModal) {
-    resultsModal.style.display = 'none'
-  }
-})
 resetButton.addEventListener('click', () => resetGame())

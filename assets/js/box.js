@@ -7,7 +7,7 @@ upperLeftBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
-    enableButtons()
+    setButtons()
   }
 })
 upperCenterBox.addEventListener('click', () => {
@@ -19,7 +19,7 @@ upperCenterBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
-    enableButtons()
+    setButtons()
   }
 })
 upperRightBox.addEventListener('click', () => {
@@ -31,7 +31,7 @@ upperRightBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
-    enableButtons()
+    setButtons()
   }
 })
 middleLeftBox.addEventListener('click', () => {
@@ -43,7 +43,7 @@ middleLeftBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
-    enableButtons()
+    setButtons()
   }
 })
 middleCenterBox.addEventListener('click', () => {
@@ -55,7 +55,7 @@ middleCenterBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
-    enableButtons()
+    setButtons()
   }
 })
 middleRightBox.addEventListener('click', () => {
@@ -67,7 +67,7 @@ middleRightBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
-    enableButtons()
+    setButtons()
   }
 })
 lowerLeftBox.addEventListener('click', () => {
@@ -79,7 +79,7 @@ lowerLeftBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
-    enableButtons()
+    setButtons()
   }
 })
 lowerCenterBox.addEventListener('click', () => {
@@ -91,7 +91,7 @@ lowerCenterBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
-    enableButtons()
+    setButtons()
   }
 })
 lowerRightBox.addEventListener('click', () => {
@@ -103,6 +103,6 @@ lowerRightBox.addEventListener('click', () => {
     setPlayerTurn()
     showPlayerTurnText()
     checkCombination()
-    enableButtons()
+    setButtons()
   }
 })
