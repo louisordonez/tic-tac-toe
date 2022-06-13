@@ -27,6 +27,7 @@ undoButton.addEventListener('click', () => {
 // Redo
 redoButton.addEventListener('click', () => {
   const movesItems = document.querySelectorAll('[data-moves-item]')
+  let redoIndex
 
   movesIndex = movesIndex + 1
   movesFlat = moves[movesIndex].flat().flat()
@@ -38,7 +39,7 @@ redoButton.addEventListener('click', () => {
   } else if (movesIndex <= !0) {
     undoButton.disabled = false
   }
-  let redoIndex = movesIndex - 1
+  redoIndex = movesIndex - 1
   movesItems[redoIndex].style.display = 'block'
 })
 
