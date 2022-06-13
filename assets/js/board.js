@@ -34,7 +34,7 @@ const showResults = (result) => {
 }
 
 const checkCombination = () => {
-  let comb
+  let combo
 
   if (playerTurn === 'O') {
     combo = crossWinCombo
