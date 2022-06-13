@@ -12,19 +12,19 @@ const setPlayerName = () => {
   setScore()
 }
 
-startCrossButton.addEventListener('click', () => {
-  playerTurn = 'O'
+const setPlayer = () => {
   setupSection.style.display = 'none'
   mainSection.style.display = 'block'
   setPlayerName()
   setPlayerTurn()
   showPlayerTurnText()
+}
+
+startCrossButton.addEventListener('click', () => {
+  playerTurn = 'O'
+  setPlayer()
 })
 startCircleButton.addEventListener('click', () => {
   playerTurn = 'X'
-  setupSection.style.display = 'none'
-  mainSection.style.display = 'block'
-  setPlayerName()
-  setPlayerTurn()
-  showPlayerTurnText()
+  setPlayer()
 })
