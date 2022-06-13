@@ -1,5 +1,14 @@
+const setGameStatus = (state) => {
+  if (state === true) {
+    done = true
+    movesIndex = moves.length - 1
+  } else {
+    done = false
+  }
+}
+
 const setInitialState = () => {
-  done = false
+  setGameStatus(false)
   moves.length = 0
   moves.push(JSON.parse(JSON.stringify(noMoves)))
   movesFlat = undefined
@@ -11,8 +20,6 @@ const setPlayerMove = () => {
 }
 
 const showResults = (result) => {
-  done = true
-  movesIndex = moves.length - 1
   if (result === 'draw') {
     playerTurnText.textContent = `Draw`
     resultsModalText.textContent = `Draw`
@@ -30,6 +37,7 @@ const showResults = (result) => {
     }
   }
   resultsModal.style.display = 'block'
+  setGameStatus(true)
 }
 
 const checkCombination = () => {
