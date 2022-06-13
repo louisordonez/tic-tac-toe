@@ -28,6 +28,7 @@ button {
   --orange: #fd7e14;
   --yellow: #ffc107;
   --green: #198754;
+  --green-light: #28a745;
   --teal: #20c997;
   --cyan: #0dcaf0;
   --white: #fff;
@@ -49,7 +50,6 @@ button {
   --danger: var(--red);
   --light: var(--gray-100);
   --dark: var(--gray-900);
-  --green-light: #28a745;
 }
 
 .modal-content, .bottom-container button, .box, .setup-player-cross,
