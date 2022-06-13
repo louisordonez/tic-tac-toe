@@ -64,6 +64,7 @@ let moves = [
   ],
 ]
 let movesIndex
+let movesFlat
 const noMoves = [
   [
     ['', '', ''],

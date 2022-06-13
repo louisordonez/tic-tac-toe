@@ -22,26 +22,23 @@ const enableButtons = () => {
 // Undo
 undoButton.addEventListener('click', () => {
   const movesItems = document.querySelectorAll('[data-moves-item]')
-  let movesFlat
 
   movesIndex = movesIndex - 1
   movesFlat = moves[movesIndex].flat().flat()
   boxes.forEach((box, i) => {
     box.textContent = movesFlat[i]
   })
-  movesItems[movesIndex].style.display = 'none'
   if (movesIndex <= 0) {
     undoButton.disabled = true
-  }
-  if (movesItems[movesIndex] !== undefined) {
+  } else if (movesItems[movesIndex] !== undefined) {
     redoButton.disabled = false
   }
+  movesItems[movesIndex].style.display = 'none'
 })
 
 // Redo
 redoButton.addEventListener('click', () => {
   const movesItems = document.querySelectorAll('[data-moves-item]')
-  let movesFlat
 
   movesIndex = movesIndex + 1
   movesFlat = moves[movesIndex].flat().flat()
@@ -50,12 +47,11 @@ redoButton.addEventListener('click', () => {
   })
   if (movesItems[movesIndex] === undefined) {
     redoButton.disabled = true
-  } else {
-    movesItems[movesIndex].style.display = 'block'
-  }
-  if (movesIndex <= !0) {
+  } else if (movesIndex <= !0) {
     undoButton.disabled = false
   }
+  let redoIndex = movesIndex - 1
+  movesItems[redoIndex].style.display = 'block'
 })
 
 // Reset
@@ -64,6 +60,15 @@ const resetGame = () => {
 
   done = false
   moves.length = 0
+  moves = [
+    [
+      ['', '', ''],
+      ['', '', ''],
+      ['', '', ''],
+    ],
+  ]
+  movesFlat = undefined
+  movesIndex = undefined
   state.forEach((rows) => {
     rows.forEach((innerRows) => {
       for (let i = 0; i < innerRows.length; i++) {
