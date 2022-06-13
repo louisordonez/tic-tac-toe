@@ -47,7 +47,7 @@ const resultsModal = document.querySelector('[data-results-modal]')
 const resultsModalText = document.querySelector('[data-results-text]')
 const resultsModalClose = document.querySelector('[data-results-close]')
 
-// State and Moves
+// Done, State, and Moves
 let done
 let state = [
   [
