@@ -7,3 +7,10 @@ const addMoveToList = (text) => {
   newP.appendChild(newContent)
   movesModalListContainer.appendChild(newP)
 }
+
+movesModalClose.addEventListener('click', () => (movesModal.style.display = 'none'))
+window.addEventListener('click', (event) => {
+  if (event.target == movesModal) {
+    movesModal.style.display = 'none'
+  }
+})

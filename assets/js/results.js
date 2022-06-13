@@ -17,3 +17,10 @@ const showResults = (result) => {
   resultsModal.style.display = 'block'
   setGameStatus(true)
 }
+
+resultsModalClose.addEventListener('click', () => (resultsModal.style.display = 'none'))
+window.addEventListener('click', (event) => {
+  if (event.target == resultsModal) {
+    resultsModal.style.display = 'none'
+  }
+})
