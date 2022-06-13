@@ -22,12 +22,12 @@ const showResults = (result) => {
       playerTurnText.textContent = `${playerCrossName} wins!`
       resultsModalText.textContent = `${playerCrossName} wins!`
       playerCrossScore += 1
-      showScore()
+      setScore()
     } else {
       playerTurnText.textContent = `${playerCircleName} wins!`
       resultsModalText.textContent = `${playerCircleName} wins!`
       playerCircleScore += 1
-      showScore()
+      setScore()
     }
   }
   resultsModal.style.display = 'block'

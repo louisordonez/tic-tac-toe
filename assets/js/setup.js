@@ -9,7 +9,7 @@ const setPlayerName = () => {
     playerCrossName = 'Player X'
     playerCircleName = 'Player O'
   }
-  showScore()
+  setScore()
 }
 
 startCrossButton.addEventListener('click', () => {
