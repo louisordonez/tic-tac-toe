@@ -63,8 +63,8 @@ const resetGame = () => {
     })
   })
   for (let i = 0; i < boxes.length; i++) {
-    boxes[i].textContent = ''
     boxes[i].classList.remove('win-animation')
+    boxes[i].textContent = ''
   }
   for (let i = 0; i < movesItems.length; i++) {
     movesItems[i].remove()
