@@ -27,10 +27,12 @@ const setGame = (player) => {
   setInitialState()
   setButtons()
 }
-
+let firstPlayer
 startCrossButton.addEventListener('click', () => {
   setGame('O')
+  firstPlayer = 'X'
 })
 startCircleButton.addEventListener('click', () => {
   setGame('X')
+  firstPlayer = 'O'
 })

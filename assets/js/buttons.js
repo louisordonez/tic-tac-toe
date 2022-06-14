@@ -68,8 +68,16 @@ const resetGame = () => {
   for (let i = 0; i < movesItems.length; i++) {
     movesItems[i].remove()
   }
-  setPlayerTurn()
-  showPlayerTurnText()
+  if (firstPlayer === 'X') {
+    playerTurn = 'X'
+    playerTurnName = playerCrossName
+  } else if (firstPlayer === 'O') {
+    playerTurn = 'O'
+    playerTurnName = playerCircleName
+  }
+  playerTurnText.textContent = `Turn: ${playerTurnName}`
+  // setPlayerTurn()
+  // showPlayerTurnText()
   setInitialState()
   setButtons()
 }
