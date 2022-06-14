@@ -319,10 +319,10 @@ button {
 .modal-content {
   background-color: var(--white);
   margin: auto;
-  padding-top: 4vmin;
-  padding-left: 6vmin;
-  padding-right: 6vmin;
-  padding-bottom: 8vmin;
+  padding-top: 3vmin;
+  padding-left: 5vmin;
+  padding-right: 5vmin;
+  padding-bottom: 6vmin;
   width: 75%;
   border-radius: 1vmin;
 }
@@ -332,13 +332,12 @@ button {
   margin-right: 2vmin;
   font-size: 4vmin;
   text-align: center;
-  padding: 1vmin;
 }
 .modal-content p {
   color: var(--black);
   margin-left: 2vmin;
   margin-right: 2vmin;
-  padding: 1vmin;
+  padding: 0.5vmin;
   font-size: 3vmin;
   text-align: left;
 }
