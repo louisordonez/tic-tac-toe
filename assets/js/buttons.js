@@ -8,7 +8,12 @@ const setButtons = () => {
 }
 
 // Settings
-settingsButton.addEventListener('click', () => location.reload())
+settingsButton.addEventListener('click', () => {
+  setupSection.style.display = 'block'
+  mainSection.style.display = 'none'
+  resetGame()
+  resetScore()
+})
 
 // Undo
 undoButton.addEventListener('click', () => {
