@@ -50,6 +50,10 @@ const resultsModal = document.querySelector('[data-results-modal]')
 const resultsModalText = document.querySelector('[data-results-text]')
 const resultsModalClose = document.querySelector('[data-results-close]')
 
+// Colors
+const yellowColor = 'rgb(244, 193, 66)'
+const redColor = 'rgb(235, 88, 81)'
+
 // Done, State, and Moves
 let done
 let state = [

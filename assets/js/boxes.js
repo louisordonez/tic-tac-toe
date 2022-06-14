@@ -1,9 +1,9 @@
 const addMove = (box, turn) => {
   box.textContent = turn
   if (turn === 'X') {
-    box.style.color = 'rgb(244, 193, 66)'
+    box.style.color = yellowColor
   } else {
-    box.style.color = 'rgb(235, 88, 81)'
+    box.style.color = redColor
   }
 }
 
