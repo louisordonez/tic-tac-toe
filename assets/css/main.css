@@ -332,7 +332,7 @@ button {
   margin-right: 2vmin;
   font-size: 4vmin;
   text-align: center;
-  padding: 2vmin;
+  padding: 1vmin;
 }
 .modal-content p {
   color: var(--black);
@@ -356,6 +356,11 @@ button {
   color: var(--gray-400);
   text-decoration: none;
   cursor: pointer;
+}
+
+.moves-list-container div {
+  border-radius: 1vmin;
+  margin: 2vmin;
 }
 
 .main {
