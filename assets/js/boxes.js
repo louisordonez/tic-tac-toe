@@ -97,7 +97,7 @@ lowerLeftBox.addEventListener('click', () => {
 lowerCenterBox.addEventListener('click', () => {
   if (lowerCenterBox.textContent === '' && done === false) {
     state[0][2][1] = playerTurn
-    laddMove(lowerCenterBox, playerTurn)
+    addMove(lowerCenterBox, playerTurn)
     addMoveToList(`${playerTurnName}: Lower Center Box`)
     setPlayerMove()
     setPlayerTurn()
