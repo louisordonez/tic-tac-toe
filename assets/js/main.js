@@ -21,6 +21,9 @@ let playerCircleScore = 0
 // Player
 const playerTurnText = document.querySelector('[data-player]')
 
+// Settings
+const settingsButton = document.querySelector('[data-settings]')
+
 // Board
 const boxes = document.querySelectorAll('[data-box]')
 const upperLeftBox = document.querySelector('[data-upper-left]')

@@ -7,6 +7,9 @@ const setButtons = () => {
   }
 }
 
+// Settings
+settingsButton.addEventListener('click', () => location.reload())
+
 // Undo
 undoButton.addEventListener('click', () => {
   const movesItems = document.querySelectorAll('[data-moves-item]')
