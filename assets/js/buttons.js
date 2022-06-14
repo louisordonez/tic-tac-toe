@@ -70,14 +70,14 @@ const resetGame = () => {
   }
   if (firstPlayer === 'X') {
     playerTurn = 'X'
+    playerTurnText.style.color = yellowColor
     playerTurnName = playerCrossName
   } else if (firstPlayer === 'O') {
     playerTurn = 'O'
+    playerTurnText.style.color = redColor
     playerTurnName = playerCircleName
   }
   playerTurnText.textContent = `Turn: ${playerTurnName}`
-  // setPlayerTurn()
-  // showPlayerTurnText()
   setInitialState()
   setButtons()
 }

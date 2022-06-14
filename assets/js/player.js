@@ -13,5 +13,10 @@ const setPlayerTurn = () => {
 }
 
 const showPlayerTurnText = () => {
+  if (playerTurn === 'X') {
+    playerTurnText.style.color = yellowColor
+  } else {
+    playerTurnText.style.color = redColor
+  }
   playerTurnText.textContent = `Turn: ${playerTurnName}`
 }
