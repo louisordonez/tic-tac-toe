@@ -11,6 +11,22 @@
   transform: translate(-50%, -50%);
 }
 
+.win-animation {
+  animation: expandingAnimation 1s infinite;
+}
+
+@keyframes expandingAnimation {
+  0% {
+    font-size: 18vmin;
+  }
+  50% {
+    font-size: 16vmin;
+  }
+  100% {
+    font-size: 18vmin;
+  }
+}
+
 @keyframes fadeAnimation {
   0% {
     opacity: 0;

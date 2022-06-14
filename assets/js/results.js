@@ -1,3 +1,9 @@
+const addWinAnimation = (box1, box2, box3) => {
+  box1.classList.add('win-animation')
+  box2.classList.add('win-animation')
+  box3.classList.add('win-animation')
+}
+
 const showResults = (result) => {
   if (result === 'draw') {
     playerTurnText.style.color = 'white'

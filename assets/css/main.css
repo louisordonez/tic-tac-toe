@@ -373,6 +373,34 @@ button {
   transform: translate(-50%, -50%);
 }
 
+.win-animation {
+  -webkit-animation: expandingAnimation 1s infinite;
+          animation: expandingAnimation 1s infinite;
+}
+
+@-webkit-keyframes expandingAnimation {
+  0% {
+    font-size: 18vmin;
+  }
+  50% {
+    font-size: 16vmin;
+  }
+  100% {
+    font-size: 18vmin;
+  }
+}
+
+@keyframes expandingAnimation {
+  0% {
+    font-size: 18vmin;
+  }
+  50% {
+    font-size: 16vmin;
+  }
+  100% {
+    font-size: 18vmin;
+  }
+}
 @-webkit-keyframes fadeAnimation {
   0% {
     opacity: 0;
@@ -381,7 +409,6 @@ button {
     opacity: 1;
   }
 }
-
 @keyframes fadeAnimation {
   0% {
     opacity: 0;
