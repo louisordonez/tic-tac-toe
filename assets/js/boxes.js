@@ -1,7 +1,19 @@
+const addMove = (box, turn) => {
+  const newSpan = document.createElement('span')
+
+  newSpan.textContent = turn
+  if (turn === 'X') {
+    newSpan.style.color = 'rgb(244, 193, 66)'
+  } else {
+    newSpan.style.color = 'rgb(235, 88, 81)'
+  }
+  box.appendChild(newSpan)
+}
+
 upperLeftBox.addEventListener('click', () => {
   if (upperLeftBox.textContent === '' && done === false) {
     state[0][0][0] = playerTurn
-    upperLeftBox.textContent = playerTurn
+    addMove(upperLeftBox, playerTurn)
     addMoveToList(`${playerTurnName}: Upper Left Box`)
     setPlayerMove()
     setPlayerTurn()
@@ -13,7 +25,7 @@ upperLeftBox.addEventListener('click', () => {
 upperCenterBox.addEventListener('click', () => {
   if (upperCenterBox.textContent === '' && done === false) {
     state[0][0][1] = playerTurn
-    upperCenterBox.textContent = playerTurn
+    addMove(upperCenterBox, playerTurn)
     addMoveToList(`${playerTurnName}: Upper Center Box`)
     setPlayerMove()
     setPlayerTurn()
@@ -25,7 +37,7 @@ upperCenterBox.addEventListener('click', () => {
 upperRightBox.addEventListener('click', () => {
   if (upperRightBox.textContent === '' && done === false) {
     state[0][0][2] = playerTurn
-    upperRightBox.textContent = playerTurn
+    addMove(upperRightBox, playerTurn)
     addMoveToList(`${playerTurnName}: Upper Right Box`)
     setPlayerMove()
     setPlayerTurn()
@@ -37,7 +49,7 @@ upperRightBox.addEventListener('click', () => {
 middleLeftBox.addEventListener('click', () => {
   if (middleLeftBox.textContent === '' && done === false) {
     state[0][1][0] = playerTurn
-    middleLeftBox.textContent = playerTurn
+    addMove(middleLeftBox, playerTurn)
     addMoveToList(`${playerTurnName}: Middle Left Box`)
     setPlayerMove()
     setPlayerTurn()
@@ -49,7 +61,7 @@ middleLeftBox.addEventListener('click', () => {
 middleCenterBox.addEventListener('click', () => {
   if (middleCenterBox.textContent === '' && done === false) {
     state[0][1][1] = playerTurn
-    middleCenterBox.textContent = playerTurn
+    addMove(middleCenterBox, playerTurn)
     addMoveToList(`${playerTurnName}: Middle Center Box`)
     setPlayerMove()
     setPlayerTurn()
@@ -61,7 +73,7 @@ middleCenterBox.addEventListener('click', () => {
 middleRightBox.addEventListener('click', () => {
   if (middleRightBox.textContent === '' && done === false) {
     state[0][1][2] = playerTurn
-    middleRightBox.textContent = playerTurn
+    addMove(middleRightBox, playerTurn)
     addMoveToList(`${playerTurnName}: Middle Right Box`)
     setPlayerMove()
     setPlayerTurn()
@@ -73,7 +85,7 @@ middleRightBox.addEventListener('click', () => {
 lowerLeftBox.addEventListener('click', () => {
   if (lowerLeftBox.textContent === '' && done === false) {
     state[0][2][0] = playerTurn
-    lowerLeftBox.textContent = playerTurn
+    addMove(lowerLeftBox, playerTurn)
     addMoveToList(`${playerTurnName}: Lower Left Box`)
     setPlayerMove()
     setPlayerTurn()
@@ -85,7 +97,7 @@ lowerLeftBox.addEventListener('click', () => {
 lowerCenterBox.addEventListener('click', () => {
   if (lowerCenterBox.textContent === '' && done === false) {
     state[0][2][1] = playerTurn
-    lowerCenterBox.textContent = playerTurn
+    laddMove(lowerCenterBox, playerTurn)
     addMoveToList(`${playerTurnName}: Lower Center Box`)
     setPlayerMove()
     setPlayerTurn()
@@ -97,7 +109,7 @@ lowerCenterBox.addEventListener('click', () => {
 lowerRightBox.addEventListener('click', () => {
   if (lowerRightBox.textContent === '' && done === false) {
     state[0][2][2] = playerTurn
-    lowerRightBox.textContent = playerTurn
+    addMove(lowerRightBox, playerTurn)
     addMoveToList(`${playerTurnName}: Lower Right Box`)
     setPlayerMove()
     setPlayerTurn()

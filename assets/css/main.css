@@ -11,7 +11,8 @@
 }
 
 body {
-  background-color: var(--blue);
+  background-color: var(--blue-dark);
+  height: 100vh;
   color: var(--white);
 }
 
@@ -21,12 +22,17 @@ button {
 
 :root {
   --blue: #0d6efd;
+  --blue-dark: rgb(36, 50, 114);
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #d63384;
   --red: #dc3545;
+  --red-light: rgb(237, 117, 113);
+  --red-dark: rgb(235, 88, 81);
   --orange: #fd7e14;
   --yellow: #ffc107;
+  --yellow-light: rgb(248, 214, 72);
+  --yellow-dark: rgb(244, 193, 66);
   --green: #198754;
   --green-light: #28a745;
   --teal: #20c997;
@@ -41,6 +47,8 @@ button {
   --gray-700: #495057;
   --gray-800: #343a40;
   --gray-900: #212529;
+  --gray-light: rgb(110, 110, 110);
+  --gray-dark: rgb(90, 90, 90);
   --black: #000;
   --primary: var(--blue);
   --secondary: var(--gray-600);
@@ -52,8 +60,7 @@ button {
   --dark: var(--gray-900);
 }
 
-.modal-content, .bottom-container button, .box, .settings button, .setup-player-cross,
-.setup-player-circle {
+.modal-content, .bottom-container button, .box, .settings button, .setup-player-cross, .setup-player-circle {
   box-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
@@ -61,8 +68,7 @@ button {
   text-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;
 }
 
-.bottom-container button:hover, .box:hover, .settings button:hover, .setup-player-cross:hover,
-.setup-player-circle:hover {
+.bottom-container button:hover, .box:hover, .settings button:hover, .setup-player-cross:hover, .setup-player-circle:hover {
   position: relative;
   top: 0.5vmin;
 }
@@ -132,10 +138,9 @@ button {
   font-size: 3vmin;
 }
 
-.setup-player-cross,
-.setup-player-circle {
+.setup-player-cross, .setup-player-circle {
   color: var(--black);
-  background-color: var(--white);
+  background-color: var(--yellow-dark);
   margin-left: 4vmin;
   margin-right: 4vmin;
   width: 40vmin;
@@ -143,17 +148,15 @@ button {
   border-radius: 1.6vmin;
   text-align: center;
 }
-.setup-player-cross:focus,
-.setup-player-circle:focus {
+.setup-player-cross:focus, .setup-player-circle:focus {
   outline: 0.5px solid var(--black);
 }
-.setup-player-cross h1,
-.setup-player-circle h1 {
+.setup-player-cross h1, .setup-player-circle h1 {
   padding-top: 4vmin;
   font-size: 3.5vmin;
 }
-.setup-player-cross input[type=text],
-.setup-player-circle input[type=text] {
+.setup-player-cross input[type=text], .setup-player-circle input[type=text] {
+  background: none;
   margin-top: 6vmin;
   font-size: 3vmin;
   text-align: center;
@@ -163,9 +166,24 @@ button {
   border: none;
   border-bottom: 0.5vmin solid var(--black);
 }
-.setup-player-cross input[type=text]:focus,
-.setup-player-circle input[type=text]:focus {
+.setup-player-cross input[type=text]:focus, .setup-player-circle input[type=text]:focus {
   outline: none;
+}
+.setup-player-cross ::-moz-placeholder, .setup-player-circle ::-moz-placeholder {
+  color: var(--black);
+  opacity: 0.5;
+}
+.setup-player-cross :-ms-input-placeholder, .setup-player-circle :-ms-input-placeholder {
+  color: var(--black);
+  opacity: 0.5;
+}
+.setup-player-cross ::placeholder, .setup-player-circle ::placeholder {
+  color: var(--black);
+  opacity: 0.5;
+}
+
+.setup-player-circle {
+  background-color: var(--red-dark);
 }
 
 .score {
@@ -239,6 +257,9 @@ button {
 }
 
 .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0.5vmin solid var(--white);
   background-color: var(--dark);
   border-radius: 2.4vmin;
@@ -246,10 +267,14 @@ button {
   margin-right: 1vmin;
   width: 20vmin;
   height: 20vmin;
-  padding: 1vmin;
-  font-size: 13vmin;
+  font-size: 23vmin;
   text-align: center;
   cursor: pointer;
+}
+.box span {
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 .bottom {

@@ -72,10 +72,9 @@
   }
 }
 
-.setup-player-cross,
-.setup-player-circle {
+.setup-player-cross {
   color: var(--black);
-  background-color: var(--white);
+  background-color: var(--yellow-dark);
   margin-left: 4vmin;
   margin-right: 4vmin;
   width: 40vmin;
@@ -96,6 +95,7 @@
   }
 
   input[type='text'] {
+    background: none;
     margin-top: 6vmin;
     font-size: 3vmin;
     text-align: center;
@@ -109,4 +109,14 @@
       outline: none;
     }
   }
+
+  ::placeholder {
+    color: var(--black);
+    opacity: 0.5;
+  }
+}
+
+.setup-player-circle {
+  @extend .setup-player-cross;
+  background-color: var(--red-dark);
 }
