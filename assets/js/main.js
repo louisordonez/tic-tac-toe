@@ -54,8 +54,8 @@ const resultsModalClose = document.querySelector('[data-results-close]')
 const yellowColor = 'rgb(244, 193, 66)'
 const redColor = 'rgb(235, 88, 81)'
 
-// Done, State, and Moves
-let done
+// isDone, State, and Moves
+let isDone
 let state = [
   [
     ['', '', ''],
@@ -162,10 +162,10 @@ const circleWinCombo = [
 
 const setGameStatus = (status) => {
   if (status === true) {
-    done = true
+    isDone = true
     movesIndex = moves.length - 1
   } else {
-    done = false
+    isDone = false
   }
 }
 

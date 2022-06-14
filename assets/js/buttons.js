@@ -1,5 +1,5 @@
 const setButtons = () => {
-  if (done === true) {
+  if (isDone === true) {
     undoButton.disabled = false
   } else {
     redoButton.disabled = true
