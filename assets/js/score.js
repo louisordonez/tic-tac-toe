@@ -1,4 +1,4 @@
-const setScore = () => {
+const setScore = (result) => {
   playerCrossScoreText.style.color = yellowColor
   playerCrossScoreText.textContent = `${playerCrossName}: ${playerCrossScore}`
   playerCircleScoreText.style.color = redColor

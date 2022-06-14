@@ -1,6 +1,8 @@
 const showResults = (result) => {
   if (result === 'draw') {
+    playerTurnText.style.color = 'white'
     playerTurnText.textContent = `Draw!`
+    resultsModalText.style.color = 'black'
     resultsModalText.textContent = `Draw!`
   } else {
     if (playerTurn === 'O') {
