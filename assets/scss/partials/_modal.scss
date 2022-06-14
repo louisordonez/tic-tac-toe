@@ -13,8 +13,10 @@
 .modal-content {
   background-color: var(--white);
   margin: auto;
-  padding: 2vmin;
-  padding-bottom: 10vmin;
+  padding-top: 4vmin;
+  padding-left: 6vmin;
+  padding-right: 6vmin;
+  padding-bottom: 8vmin;
   width: 75%;
   border-radius: 1vmin;
 
@@ -36,14 +38,6 @@
     padding: 1vmin;
     font-size: 3vmin;
     text-align: left;
-
-    &:nth-child(even) {
-      background: var(--white);
-    }
-
-    &:nth-child(odd) {
-      background: var(--gray-400);
-    }
   }
 }
 
