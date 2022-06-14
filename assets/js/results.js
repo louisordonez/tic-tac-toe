@@ -6,11 +6,13 @@ const showResults = (result) => {
     if (playerTurn === 'O') {
       playerTurnText.style.color = yellowColor
       playerTurnText.textContent = `${playerCrossName} wins!`
+      resultsModalText.style.color = yellowColor
       resultsModalText.textContent = `${playerCrossName} wins!`
       playerCrossScore += 1
     } else {
       playerTurnText.style.color = redColor
       playerTurnText.textContent = `${playerCircleName} wins!`
+      resultsModalText.style.color = redColor
       resultsModalText.textContent = `${playerCircleName} wins!`
       playerCircleScore += 1
     }
