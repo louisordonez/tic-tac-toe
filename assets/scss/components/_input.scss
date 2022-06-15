@@ -1,0 +1,24 @@
+.setup-player-cross input[type='text'] {
+  background: none;
+  margin-top: 6vmin;
+  font-size: 3vmin;
+  text-align: center;
+  width: 80%;
+  padding: 1.2vmin 2vmin;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 0.5vmin solid var(--black);
+
+  &:focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: var(--black);
+    opacity: 0.5;
+  }
+}
+
+.setup-player-circle {
+  @extend .setup-player-cross;
+}

@@ -1,0 +1,50 @@
+@use '../sass-utils' as *;
+
+.setup-container button {
+  @extend %icon-style;
+
+  padding: 0 3.4vmin;
+  margin-top: 5vmin;
+  margin-left: 1vmin;
+  margin-right: 1vmin;
+  border-radius: 1vmin;
+  border: none;
+  background-color: var(--green);
+
+  &:hover {
+    background-color: var(--green-light);
+  }
+}
+
+.settings button {
+  @extend %icon-style;
+  @extend %box-shadow;
+  @extend %hover-move;
+
+  margin-left: 1vmin;
+  margin-right: 1vmin;
+  border-radius: 1vmin;
+  border: none;
+  background-color: var(--gray-400);
+
+  &:hover {
+    background-color: var(--white);
+  }
+}
+
+.bottom-container button {
+  @extend %icon-style;
+  @extend %box-shadow;
+  @extend %hover-move;
+
+  padding: 0 3.4vmin;
+  margin-left: 1vmin;
+  margin-right: 1vmin;
+  border-radius: 1vmin;
+  border: none;
+  background-color: var(--gray-400);
+
+  &:hover {
+    background-color: var(--white);
+  }
+}

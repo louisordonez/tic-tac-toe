@@ -40,6 +40,14 @@
   --dark: var(--gray-900);
 }
 
+%icon-style {
+  i {
+    padding: 1.5vmin;
+    padding-top: 1.8vmin;
+    font-size: 3vmin;
+  }
+}
+
 // Shadow
 %box-shadow {
   box-shadow: rgba(0, 0, 0, 0.3) 0vmin 1.9vmin 3.8vmin, rgba(0, 0, 0, 0.22) 0vmin 1.5vmin 1.2vmin;

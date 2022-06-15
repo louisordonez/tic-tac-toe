@@ -1,0 +1,194 @@
+@use '../sass-utils' as *;
+
+.main {
+  display: none;
+}
+
+.setup-title {
+  @extend %text-shadow;
+
+  padding: 2vmin;
+}
+
+.setup-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12vmin;
+}
+
+.setup-subtitle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vmin;
+}
+
+.setup {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  > div {
+    padding: 0;
+    padding-bottom: 0;
+  }
+}
+
+.setup-container {
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.setup-player-cross {
+  @extend %box-shadow;
+  @extend %hover-move;
+
+  color: var(--black);
+  background-color: var(--yellow-dark);
+  margin-left: 4vmin;
+  margin-right: 4vmin;
+  width: 40vmin;
+  height: 40vmin;
+  border-radius: 1.6vmin;
+  text-align: center;
+
+  &:focus {
+    outline: 0.5px solid var(--black);
+  }
+}
+
+.setup-player-circle {
+  @extend .setup-player-cross;
+
+  background-color: var(--red-dark);
+}
+
+.score {
+  @extend %text-shadow;
+
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 2vmin;
+  padding-left: 3vmin;
+}
+
+.settings {
+  @extend %text-shadow;
+
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 3vmin;
+  padding-right: 3vmin;
+}
+
+.title {
+  @extend %text-shadow;
+
+  padding: 2vmin;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-container {
+  margin-top: 1vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-container {
+  display: flex;
+  border-radius: 1vmin;
+  margin: 2vmin;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  @extend %box-shadow;
+  @extend %hover-move;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5vmin solid var(--white);
+  background-color: var(--dark);
+  border-radius: 2.4vmin;
+  margin-left: 1vmin;
+  margin-right: 1vmin;
+  width: 20vmin;
+  height: 20vmin;
+  padding-top: 1vmin;
+  font-size: 18vmin;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.moves-button {
+  margin-left: 10vmin;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  @extend %box-shadow;
+
+  background-color: var(--white);
+  margin: auto;
+  padding-top: 3vmin;
+  padding-left: 5vmin;
+  padding-right: 5vmin;
+  padding-bottom: 7vmin;
+  border-radius: 1vmin;
+}
+
+.modal-close {
+  text-align: right;
+  margin-right: 2vmin;
+}
+
+.moves-list-container {
+  div {
+    border-radius: 1vmin;
+    margin: 2vmin;
+  }
+}
