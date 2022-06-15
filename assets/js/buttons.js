@@ -26,8 +26,7 @@ undoButton.addEventListener('click', () => {
   })
   if (movesIndex <= 0) {
     undoButton.disabled = true
-  }
-  if (movesIndex >= 0) {
+  } else if (movesIndex >= 0) {
     redoButton.disabled = false
   }
   // movesItems[movesIndex].style.display = 'none'
@@ -43,11 +42,10 @@ redoButton.addEventListener('click', () => {
   boxes.forEach((box, i) => {
     box.textContent = movesFlat[i]
   })
-  if (movesIndex > 0) {
-    undoButton.disabled = false
-  }
-  if (movesItems[movesIndex] === undefined) {
+  if (movesIndex >= moves.length - 1) {
     redoButton.disabled = true
+  } else if (movesIndex <= moves.length - 1) {
+    undoButton.disabled = false
   }
   redoIndex = movesIndex - 1
   // movesItems[redoIndex].style.display = 'block'
