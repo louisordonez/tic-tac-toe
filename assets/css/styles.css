@@ -420,4 +420,5 @@ button {
 .moves-list-container div {
   border-radius: 1vmin;
   margin: 2vmin;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
