@@ -19,7 +19,7 @@ settingsButton.addEventListener('click', () => {
 undoButton.addEventListener('click', () => {
   const movesItems = document.querySelectorAll('[data-moves-item]')
 
-  movesIndex = movesIndex - 1
+  movesIndex -= 1
   movesFlat = moves[movesIndex].flat().flat()
   boxes.forEach((box, i) => {
     box.textContent = movesFlat[i]
@@ -37,7 +37,7 @@ redoButton.addEventListener('click', () => {
   const movesItems = document.querySelectorAll('[data-moves-item]')
   let redoIndex
 
-  movesIndex = movesIndex + 1
+  movesIndex += 1
   movesFlat = moves[movesIndex].flat().flat()
   boxes.forEach((box, i) => {
     box.textContent = movesFlat[i]
