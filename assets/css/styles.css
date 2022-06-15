@@ -6,6 +6,20 @@
   transform: translate(-50%, -50%);
 }
 
+.yellow-move {
+  background-color: var(--yellow-dark);
+}
+.yellow-move:hover {
+  background-color: var(--yellow-light);
+}
+
+.red-move {
+  background-color: var(--red-dark);
+}
+.red-move:hover {
+  background-color: var(--red-light);
+}
+
 :root {
   --blue: #0d6efd;
   --blue-dark: rgb(36, 50, 114);
@@ -408,8 +422,8 @@ button {
 }
 
 .modal-space {
-  padding-right: 23.65vmin;
-  padding-left: 23.65vmin;
+  padding-right: 24vmin;
+  padding-left: 24vmin;
 }
 
 .modal-close {
@@ -420,4 +434,5 @@ button {
 .moves-list-container div {
   border-radius: 1vmin;
   margin: 2vmin;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

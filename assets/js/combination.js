@@ -2,7 +2,6 @@ const checkCombination = () => {
   let combo
 
   playerTurn === 'O' ? (combo = crossWinCombo) : (combo = circleWinCombo)
-
   if (
     // XXX OOO
     // --- ---
