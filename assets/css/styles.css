@@ -159,18 +159,6 @@
 .setup-player-cross input[type=text]:focus, .setup-player-circle input[type=text]:focus {
   outline: none;
 }
-.setup-player-cross input[type=text] ::-moz-placeholder, .setup-player-circle input[type=text] ::-moz-placeholder {
-  color: var(--black);
-  opacity: 0.5;
-}
-.setup-player-cross input[type=text] :-ms-input-placeholder, .setup-player-circle input[type=text] :-ms-input-placeholder {
-  color: var(--black);
-  opacity: 0.5;
-}
-.setup-player-cross input[type=text] ::placeholder, .setup-player-circle input[type=text] ::placeholder {
-  color: var(--black);
-  opacity: 0.5;
-}
 
 .setup-title-container h1 {
   font-size: 6vmin;
@@ -290,6 +278,18 @@ button {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+.setup-container ::-moz-placeholder {
+  color: var(--black);
+  opacity: 0.5;
+}
+.setup-container :-ms-input-placeholder {
+  color: var(--black);
+  opacity: 0.5;
+}
+.setup-container ::placeholder {
+  color: var(--black);
+  opacity: 0.5;
 }
 
 .setup-player-cross, .setup-player-circle {
