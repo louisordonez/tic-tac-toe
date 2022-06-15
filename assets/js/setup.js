@@ -14,11 +14,8 @@ const setPlayerName = () => {
 
 const setGame = (player) => {
   // Set initial current player turn
-  if (player === 'X') {
-    playerTurn = 'X'
-  } else {
-    playerTurn = 'O'
-  }
+  player === 'X' ? (playerTurn = 'X') : (playerTurn = 'O')
+
   setupSection.style.display = 'none'
   mainSection.style.display = 'block'
   setPlayerName()

@@ -6,11 +6,8 @@ const addMoveToList = (turn, text) => {
   newDiv.setAttribute('data-moves-item', '')
   newP.style.fontWeight = '600'
   newP.appendChild(newContent)
-  if (turn === 'X') {
-    newDiv.style.backgroundColor = yellowColor
-  } else {
-    newDiv.style.backgroundColor = redColor
-  }
+  turn === 'X' ? (newDiv.style.backgroundColor = yellowColor) : (newDiv.style.backgroundColor = redColor)
+
   newDiv.appendChild(newP)
   movesModalListContainer.appendChild(newDiv)
 }

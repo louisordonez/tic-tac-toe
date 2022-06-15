@@ -1,10 +1,6 @@
 const addMove = (box, turn) => {
   box.textContent = turn
-  if (turn === 'X') {
-    box.style.color = yellowColor
-  } else {
-    box.style.color = redColor
-  }
+  turn === 'X' ? (box.style.color = yellowColor) : (box.style.color = redColor)
 }
 
 upperLeftBox.addEventListener('click', () => {
