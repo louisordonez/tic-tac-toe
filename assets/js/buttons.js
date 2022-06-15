@@ -85,6 +85,8 @@ const resetGame = () => {
 
 movesButton.addEventListener('click', () => {
   movesModal.style.display = 'block'
-  selectMove()
+  if (isDone === true) {
+    selectMove()
+  }
 })
 resetButton.addEventListener('click', () => resetGame())
