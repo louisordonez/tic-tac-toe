@@ -35,3 +35,15 @@
     opacity: 1;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .modal-content {
+    width: 52.5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    width: 70%;
+  }
+}

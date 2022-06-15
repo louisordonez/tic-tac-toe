@@ -322,8 +322,8 @@ button {
   padding-top: 3vmin;
   padding-left: 5vmin;
   padding-right: 5vmin;
-  padding-bottom: 6vmin;
-  width: 75%;
+  padding-bottom: 7vmin;
+  width: 38%;
   border-radius: 1vmin;
 }
 .modal-content h1 {
@@ -415,5 +415,15 @@ button {
   }
   100% {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .modal-content {
+    width: 52.5%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    width: 70%;
   }
 }/*# sourceMappingURL=main.css.map */
