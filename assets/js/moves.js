@@ -23,6 +23,7 @@ const selectMove = () => {
     movesItems[i].onclick = function () {
       index = i + 1
       showMove(index)
+      movesModal.style.display = 'none'
     }
   }
 }
