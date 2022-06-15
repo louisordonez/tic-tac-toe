@@ -27,7 +27,7 @@ const setGame = (player) => {
   setInitialState()
   setButtons()
 }
-let firstPlayer
+
 startCrossButton.addEventListener('click', () => {
   setGame('O')
   firstPlayer = 'X'

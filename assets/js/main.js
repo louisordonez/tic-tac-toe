@@ -4,6 +4,7 @@ const startCrossButton = document.querySelector('[data-start-cross]')
 const startCircleButton = document.querySelector('[data-start-circle]')
 const playerCrossNameInput = document.querySelector('[data-player-cross-name]')
 const playerCircleNameInput = document.querySelector('[data-player-circle-name]')
+let firstPlayer
 let playerTurn
 let playerCrossName
 let playerCircleName
