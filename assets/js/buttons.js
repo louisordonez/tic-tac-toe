@@ -17,8 +17,6 @@ settingsButton.addEventListener('click', () => {
 
 // Undo
 undoButton.addEventListener('click', () => {
-  const movesItems = document.querySelectorAll('[data-moves-item]')
-
   movesIndex -= 1
   movesFlat = moves[movesIndex].flat().flat()
   boxes.forEach((box, i) => {
@@ -29,12 +27,10 @@ undoButton.addEventListener('click', () => {
   } else if (movesIndex >= 0) {
     redoButton.disabled = false
   }
-  // movesItems[movesIndex].style.display = 'none'
 })
 
 // Redo
 redoButton.addEventListener('click', () => {
-  const movesItems = document.querySelectorAll('[data-moves-item]')
   let redoIndex
 
   movesIndex += 1
@@ -48,7 +44,6 @@ redoButton.addEventListener('click', () => {
     undoButton.disabled = false
   }
   redoIndex = movesIndex - 1
-  // movesItems[redoIndex].style.display = 'block'
 })
 
 // Reset
