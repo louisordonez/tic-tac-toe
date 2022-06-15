@@ -407,6 +407,11 @@ button {
   border-radius: 1vmin;
 }
 
+.modal-space {
+  padding-right: 23.65vmin;
+  padding-left: 23.65vmin;
+}
+
 .modal-close {
   text-align: right;
   margin-right: 2vmin;
@@ -415,9 +420,4 @@ button {
 .moves-list-container div {
   border-radius: 1vmin;
   margin: 2vmin;
-}
-
-.results-modal-space {
-  padding-right: 23.65vmin;
-  padding-left: 23.65vmin;
 }/*# sourceMappingURL=styles.css.map */
