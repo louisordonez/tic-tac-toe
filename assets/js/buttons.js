@@ -75,6 +75,7 @@ const resetGame = () => {
   }
   playerTurnText.textContent = `Turn: ${playerTurnName}`
   setInitialState()
+  setBoxes()
   setButtons()
 }
 

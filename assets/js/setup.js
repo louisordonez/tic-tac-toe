@@ -18,6 +18,7 @@ const setGame = (player) => {
 
   setupSection.style.display = 'none'
   mainSection.style.display = 'block'
+  setBoxes()
   setPlayerName()
   setPlayerTurn()
   showPlayerTurnText()
