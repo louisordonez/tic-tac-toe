@@ -1,5 +1,5 @@
 const addWinAnimation = (indexes) => {
-  indexes.forEach((index) => boxes[index].classList.add('win-animation'))
+  indexes.forEach((index) => boxes[index].classList.add('expanding-animation'))
 }
 
 const showResults = (result) => {

@@ -79,7 +79,7 @@
   top: 0.5vmin;
 }
 
-.win-animation {
+.expanding-animation {
   -webkit-animation: expandingAnimation 1s infinite;
           animation: expandingAnimation 1s infinite;
 }
