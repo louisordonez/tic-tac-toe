@@ -41,7 +41,6 @@ const addMoveToList = (turn, text) => {
   } else {
     newDiv.classList.add('red-move')
   }
-
   newDiv.appendChild(newP)
   movesModalListContainer.appendChild(newDiv)
 }

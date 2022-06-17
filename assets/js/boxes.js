@@ -4,6 +4,14 @@ const addMove = (box, turn) => {
 }
 
 const setBoxes = () => {
+  const addBoxFunctions = () => {
+    setPlayerMove()
+    setPlayerTurn()
+    showPlayerTurnText()
+    checkCombination()
+    setButtons()
+  }
+
   boxes.forEach((box, i) => {
     box.addEventListener('click', () => {
       if (box.textContent === '' && isDone === false) {
@@ -12,91 +20,55 @@ const setBoxes = () => {
             state[0][0][0] = playerTurn
             addMove(upperLeftBox, playerTurn)
             addMoveToList(playerTurn, `${playerTurnName}: Upper Left Box`)
-            setPlayerMove()
-            setPlayerTurn()
-            showPlayerTurnText()
-            checkCombination()
-            setButtons()
+            addBoxFunctions()
             break
           case 1:
             state[0][0][1] = playerTurn
             addMove(upperCenterBox, playerTurn)
             addMoveToList(playerTurn, `${playerTurnName}: Upper Center Box`)
-            setPlayerMove()
-            setPlayerTurn()
-            showPlayerTurnText()
-            checkCombination()
-            setButtons()
+            addBoxFunctions()
             break
           case 2:
             state[0][0][2] = playerTurn
             addMove(upperRightBox, playerTurn)
             addMoveToList(playerTurn, `${playerTurnName}: Upper Right Box`)
-            setPlayerMove()
-            setPlayerTurn()
-            showPlayerTurnText()
-            checkCombination()
-            setButtons()
+            addBoxFunctions()
             break
           case 3:
             state[0][1][0] = playerTurn
             addMove(middleLeftBox, playerTurn)
             addMoveToList(playerTurn, `${playerTurnName}: Middle Left Box`)
-            setPlayerMove()
-            setPlayerTurn()
-            showPlayerTurnText()
-            checkCombination()
-            setButtons()
+            addBoxFunctions()
             break
           case 4:
             state[0][1][1] = playerTurn
             addMove(middleCenterBox, playerTurn)
             addMoveToList(playerTurn, `${playerTurnName}: Middle Center Box`)
-            setPlayerMove()
-            setPlayerTurn()
-            showPlayerTurnText()
-            checkCombination()
-            setButtons()
+            addBoxFunctions()
             break
           case 5:
             state[0][1][2] = playerTurn
             addMove(middleRightBox, playerTurn)
             addMoveToList(playerTurn, `${playerTurnName}: Middle Right Box`)
-            setPlayerMove()
-            setPlayerTurn()
-            showPlayerTurnText()
-            checkCombination()
-            setButtons()
+            addBoxFunctions()
             break
           case 6:
             state[0][2][0] = playerTurn
             addMove(lowerLeftBox, playerTurn)
             addMoveToList(playerTurn, `${playerTurnName}: Lower Left Box`)
-            setPlayerMove()
-            setPlayerTurn()
-            showPlayerTurnText()
-            checkCombination()
-            setButtons()
+            addBoxFunctions()
             break
           case 7:
             state[0][2][1] = playerTurn
             addMove(lowerCenterBox, playerTurn)
             addMoveToList(playerTurn, `${playerTurnName}: Lower Center Box`)
-            setPlayerMove()
-            setPlayerTurn()
-            showPlayerTurnText()
-            checkCombination()
-            setButtons()
+            addBoxFunctions()
             break
           case 8:
             state[0][2][2] = playerTurn
             addMove(lowerRightBox, playerTurn)
             addMoveToList(playerTurn, `${playerTurnName}: Lower Right Box`)
-            setPlayerMove()
-            setPlayerTurn()
-            showPlayerTurnText()
-            checkCombination()
-            setButtons()
+            addBoxFunctions()
             break
         }
       }

@@ -36,6 +36,7 @@ const middleRightBox = document.querySelector('[data-middle-right]')
 const lowerLeftBox = document.querySelector('[data-lower-left]')
 const lowerCenterBox = document.querySelector('[data-lower-center]')
 const lowerRightBox = document.querySelector('[data-lower-right]')
+let boxIndexes = []
 
 // Buttons
 const redoButton = document.querySelector('[data-redo]')
