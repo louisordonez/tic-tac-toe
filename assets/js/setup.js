@@ -1,35 +1,35 @@
 const setPlayerName = () => {
-  playerCrossName = playerCrossNameInput.value
-  playerCircleName = playerCircleNameInput.value
+  playerCrossName = playerCrossNameInput.value;
+  playerCircleName = playerCircleNameInput.value;
   if (playerCrossName === '' && playerCircleName !== '') {
-    playerCrossName = 'Player X'
+    playerCrossName = 'Player X';
   } else if (playerCrossName !== '' && playerCircleName === '') {
-    playerCircleName = 'Player O'
+    playerCircleName = 'Player O';
   } else if (playerCrossName === '' && playerCircleName === '') {
-    playerCrossName = 'Player X'
-    playerCircleName = 'Player O'
+    playerCrossName = 'Player X';
+    playerCircleName = 'Player O';
   }
-  setScore()
-}
+  setScore();
+};
 
 const setGame = (player) => {
   // Set initial current player turn
-  player === 'X' ? (playerTurn = 'X') : (playerTurn = 'O')
-  setupSection.style.display = 'none'
-  mainSection.style.display = 'block'
-  setBoxes()
-  setPlayerName()
-  setPlayerTurn()
-  showPlayerTurnText()
-  setInitialState()
-  setButtons()
-}
+  player === 'X' ? (playerTurn = 'X') : (playerTurn = 'O');
+  setupSection.style.display = 'none';
+  mainSection.style.display = 'block';
+  setBoxes();
+  setPlayerName();
+  setPlayerTurn();
+  showPlayerTurnText();
+  setInitialState();
+  setButtons();
+};
 
 startCrossButton.addEventListener('click', () => {
-  setGame('O')
-  firstPlayer = 'X'
-})
+  setGame('O');
+  firstPlayer = 'X';
+});
 startCircleButton.addEventListener('click', () => {
-  setGame('X')
-  firstPlayer = 'O'
-})
+  setGame('X');
+  firstPlayer = 'O';
+});
